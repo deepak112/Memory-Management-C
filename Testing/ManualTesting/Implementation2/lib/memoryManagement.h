@@ -1,0 +1,165 @@
+/*******************************************************************************                                      
+ *                        memoryManagement.h
+ ******************************************************************************/
+/*******************************************************************************
+ * @file memoryManagement.h
+ * The main properties of this algorithm is:
+ * The total memory is divided in to two major part one part is used to manage 
+   the data structure and other part is used for operation.A very less memory 
+   has been used to manage the data.
+   The major part is further divided in to 10 blocks-
+   Blocks of 8 byte,16 byte,32 byte,64 byte,128 byte,256 byte,512 byte,
+   1024 byte,2048 byte and Last block is of not specified byte it is defined 
+   as other area.
+   For memory <= 8 byte memory is allocated from blocks of 8 byte.
+   For memory <= 16 byte memory is allocated from blocks of 16 byte.
+   and so on,if memory is greater than 2048 byte it will we given from other area.
+ * SIZE can be changed and full memory architecture will be defined according to 
+   the given SIZE.The percentage of the size of blocks of 8,16,32...2048 bytes will 
+   be same,The number of blocks depend on SIZE.   
+ * one bit space are used for maintaining the status of blocks,to show whether it 
+   is filled or not.
+ * Less than 1% of total memory is used for maintaing the status.
+ * Every calculation are done using MACRO.
+ * one more function is defined to dispaly the allocated and free memory.
+ * Initially the SIZE is defined as 1 MB and We can change the SIZE according to 
+   users need.
+ *This program has the library functions for allocating memory,
+           deallocating memory and displaying the size of free memory and 
+	   allocated memory.
+
+	  *memory_alloc function - This function provides memory dynamically to 
+	                           user.  
+
+      *memory_free function - This function frees the space allocated for the
+			                  user in the created heap space under user's 
+                              request.
+
+      *memory_calloc function - This function provides memory dynamically to 
+                                user in asked number of blocks of specified 
+                                size and intialise them to zero.
+
+     *memory_realloc function - This function reallocates memory to the 
+	                            previously allocated memory pointer by asking  
+                                the user ,the already allocated pointer and  
+                                size to be allocated.
+
+ ******************************************************************************/
+
+#ifndef MEMORYMANAGEMENT_H_
+#define MEMORYMANAGEMENT_H_
+
+/*******************************************************************************
+ * Include files
+ ******************************************************************************/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<time.h>
+
+/*******************************************************************************
+ * MACRO DEFINITION
+ ******************************************************************************/
+
+#define START                             0
+#define SIZE							  1  
+/* SIZE defines the total memory used for heap in MB.
+ * here we are using memory of size 1 MB.
+ */
+#define SIZE8                             8
+#define SIZE16                            16
+#define SIZE32                            32
+#define SIZE64                            64
+#define SIZE128                           128
+#define SIZE256                           256
+#define SIZE512                           512
+#define SIZE1024                          1024
+#define SIZE2048                          2048
+#define ALL                               0
+#define TOTAL_BLOCKS_OF_SIZE_SIZE8        2048*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE16       2048*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE32       1024*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE64       1024*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE128      512*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE256      512*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE512      256*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE1024     256*SIZE
+#define TOTAL_BLOCKS_OF_SIZE_SIZE2048     128*SIZE
+#define TOTAL_BLOCKS                      TOTAL_BLOCKS_OF_SIZE_SIZE8+TOTAL_BLOCKS_OF_SIZE_SIZE16+TOTAL_BLOCKS_OF_SIZE_SIZE32+TOTAL_BLOCKS_OF_SIZE_SIZE64+TOTAL_BLOCKS_OF_SIZE_SIZE128+TOTAL_BLOCKS_OF_SIZE_SIZE256+TOTAL_BLOCKS_OF_SIZE_SIZE512+TOTAL_BLOCKS_OF_SIZE_SIZE1024+TOTAL_BLOCKS_OF_SIZE_SIZE2048
+#define TOTAL_BYTES                       TOTAL_BLOCKS/8
+#define BIT_AREA_MIN                      START
+#define START_LENGTH_SIZE8                BIT_AREA_MIN
+#define END_LENGTH_SIZE8                  START_LENGTH_SIZE8+TOTAL_BLOCKS_OF_SIZE_SIZE8/8-1
+#define START_LENGTH_SIZE16               END_LENGTH_SIZE8+1
+#define END_LENGTH_SIZE16                 START_LENGTH_SIZE16+TOTAL_BLOCKS_OF_SIZE_SIZE16/8-1
+#define START_LENGTH_SIZE32               END_LENGTH_SIZE16+1
+#define END_LENGTH_SIZE32                 START_LENGTH_SIZE32+TOTAL_BLOCKS_OF_SIZE_SIZE32/8-1
+#define START_LENGTH_SIZE64               END_LENGTH_SIZE32+1
+#define END_LENGTH_SIZE64                 START_LENGTH_SIZE64+TOTAL_BLOCKS_OF_SIZE_SIZE64/8-1
+#define START_LENGTH_SIZE128              END_LENGTH_SIZE64+1
+#define END_LENGTH_SIZE128                START_LENGTH_SIZE128+TOTAL_BLOCKS_OF_SIZE_SIZE128/8-1
+#define START_LENGTH_SIZE256              END_LENGTH_SIZE128+1
+#define END_LENGTH_SIZE256                START_LENGTH_SIZE256+TOTAL_BLOCKS_OF_SIZE_SIZE256/8-1
+#define START_LENGTH_SIZE512              END_LENGTH_SIZE256+1
+#define END_LENGTH_SIZE512                START_LENGTH_SIZE512+TOTAL_BLOCKS_OF_SIZE_SIZE512/8-1
+#define START_LENGTH_SIZE1024             END_LENGTH_SIZE512+1
+#define END_LENGTH_SIZE1024               START_LENGTH_SIZE1024+TOTAL_BLOCKS_OF_SIZE_SIZE1024/8-1
+#define START_LENGTH_SIZE2048             END_LENGTH_SIZE1024+1
+#define END_LENGTH_SIZE2048               START_LENGTH_SIZE2048+TOTAL_BLOCKS_OF_SIZE_SIZE2048/8-1
+#define BIT_AREA_MAX                      TOTAL_BYTES-1
+#define INITIAL_LENGTH_SIZE8              BIT_AREA_MAX+1
+#define MAX_LENGTH_SIZE8                  INITIAL_LENGTH_SIZE8+SIZE8*TOTAL_BLOCKS_OF_SIZE_SIZE8-1
+#define INITIAL_LENGTH_SIZE16             MAX_LENGTH_SIZE8+1
+#define MAX_LENGTH_SIZE16                 INITIAL_LENGTH_SIZE16+SIZE16*TOTAL_BLOCKS_OF_SIZE_SIZE16-1
+#define INITIAL_LENGTH_SIZE32             MAX_LENGTH_SIZE16+1
+#define MAX_LENGTH_SIZE32                 INITIAL_LENGTH_SIZE32+SIZE32*TOTAL_BLOCKS_OF_SIZE_SIZE32-1
+#define INITIAL_LENGTH_SIZE64             MAX_LENGTH_SIZE32+1
+#define MAX_LENGTH_SIZE64                 INITIAL_LENGTH_SIZE64+SIZE64*TOTAL_BLOCKS_OF_SIZE_SIZE64-1
+#define INITIAL_LENGTH_SIZE128            MAX_LENGTH_SIZE64+1
+#define MAX_LENGTH_SIZE128                INITIAL_LENGTH_SIZE128+SIZE128*TOTAL_BLOCKS_OF_SIZE_SIZE128-1
+#define INITIAL_LENGTH_SIZE256            MAX_LENGTH_SIZE128+1
+#define MAX_LENGTH_SIZE256                INITIAL_LENGTH_SIZE256+SIZE256*TOTAL_BLOCKS_OF_SIZE_SIZE256-1
+#define INITIAL_LENGTH_SIZE512            MAX_LENGTH_SIZE256+1
+#define MAX_LENGTH_SIZE512                INITIAL_LENGTH_SIZE512+SIZE512*TOTAL_BLOCKS_OF_SIZE_SIZE512-1
+#define INITIAL_LENGTH_SIZE1024           MAX_LENGTH_SIZE512+1
+#define MAX_LENGTH_SIZE1024               INITIAL_LENGTH_SIZE1024+SIZE1024*TOTAL_BLOCKS_OF_SIZE_SIZE1024-1
+#define INITIAL_LENGTH_SIZE2048           MAX_LENGTH_SIZE1024+1
+#define MAX_LENGTH_SIZE2048               INITIAL_LENGTH_SIZE2048+SIZE2048*TOTAL_BLOCKS_OF_SIZE_SIZE2048-1
+#define INITIAL_LENGTH_REMAINING          MAX_LENGTH_SIZE2048+1
+#define MAX_LENGTH                        1024*2048
+
+/*******************************************************************************
+ * ENUM DEFINITION
+ ******************************************************************************/
+
+typedef enum status
+{
+TRUE,
+FALSE
+}status;
+
+/*******************************************************************************
+ * EXTERNAL VARIABLE DECLARATION
+ ******************************************************************************/
+
+static unsigned char totalMemoryArea[1024*1024*SIZE];
+
+/*******************************************************************************
+ * API DECLARATION
+ ******************************************************************************/
+void *check_for_space(int size);
+void *memory_alloc(int size);  
+void *memory_calloc(int nelem, int elsize);
+void *memory_realloc(void * ptr, int size);
+int memory_size(void *ptr);
+int used_blocks(int size);
+int unused_blocks(int size);
+int perform_alloc(int minimum,int maximum , int start , int size);
+int calculate_blocks(int minimum , int maximum);
+int calculate_free_blocks(int minimum , int maximum);
+status memory_free(void *pointer);
+status delete_pointer(int minimum , int start , int size , void *ptr);
+status block_information(void);
+status free_block_information(void);
+#endif // MEMORY_H_

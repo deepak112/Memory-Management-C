@@ -1,0 +1,435 @@
+.TH "lib/memoryManagement.h" 3 "Thu Oct 1 2015" "Version version2" "MEMORY MANAGEMENT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/memoryManagement.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSTART\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSIZE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSIZE8\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSIZE16\fP   16"
+.br
+.ti -1c
+.RI "#define \fBSIZE32\fP   32"
+.br
+.ti -1c
+.RI "#define \fBSIZE64\fP   64"
+.br
+.ti -1c
+.RI "#define \fBSIZE128\fP   128"
+.br
+.ti -1c
+.RI "#define \fBSIZE256\fP   256"
+.br
+.ti -1c
+.RI "#define \fBSIZE512\fP   512"
+.br
+.ti -1c
+.RI "#define \fBSIZE1024\fP   1024"
+.br
+.ti -1c
+.RI "#define \fBSIZE2048\fP   2048"
+.br
+.ti -1c
+.RI "#define \fBALL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP   2048*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP   2048*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP   1024*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP   1024*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP   512*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP   512*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP   256*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP   256*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP   128*\fBSIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BLOCKS\fP   \fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP"
+.br
+.ti -1c
+.RI "#define \fBTOTAL_BYTES\fP   \fBTOTAL_BLOCKS\fP/8"
+.br
+.ti -1c
+.RI "#define \fBBIT_AREA_MIN\fP   \fBSTART\fP"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE8\fP   \fBBIT_AREA_MIN\fP"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE8\fP   \fBSTART_LENGTH_SIZE8\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE16\fP   \fBEND_LENGTH_SIZE8\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE16\fP   \fBSTART_LENGTH_SIZE16\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE32\fP   \fBEND_LENGTH_SIZE16\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE32\fP   \fBSTART_LENGTH_SIZE32\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE64\fP   \fBEND_LENGTH_SIZE32\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE64\fP   \fBSTART_LENGTH_SIZE64\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE128\fP   \fBEND_LENGTH_SIZE64\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE128\fP   \fBSTART_LENGTH_SIZE128\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE256\fP   \fBEND_LENGTH_SIZE128\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE256\fP   \fBSTART_LENGTH_SIZE256\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE512\fP   \fBEND_LENGTH_SIZE256\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE512\fP   \fBSTART_LENGTH_SIZE512\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE1024\fP   \fBEND_LENGTH_SIZE512\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE1024\fP   \fBSTART_LENGTH_SIZE1024\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBSTART_LENGTH_SIZE2048\fP   \fBEND_LENGTH_SIZE1024\fP+1"
+.br
+.ti -1c
+.RI "#define \fBEND_LENGTH_SIZE2048\fP   \fBSTART_LENGTH_SIZE2048\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP/8-1"
+.br
+.ti -1c
+.RI "#define \fBBIT_AREA_MAX\fP   \fBTOTAL_BYTES\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE8\fP   \fBBIT_AREA_MAX\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE8\fP   \fBINITIAL_LENGTH_SIZE8\fP+\fBSIZE8\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE16\fP   \fBMAX_LENGTH_SIZE8\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE16\fP   \fBINITIAL_LENGTH_SIZE16\fP+\fBSIZE16\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE32\fP   \fBMAX_LENGTH_SIZE16\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE32\fP   \fBINITIAL_LENGTH_SIZE32\fP+\fBSIZE32\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE64\fP   \fBMAX_LENGTH_SIZE32\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE64\fP   \fBINITIAL_LENGTH_SIZE64\fP+\fBSIZE64\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE128\fP   \fBMAX_LENGTH_SIZE64\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE128\fP   \fBINITIAL_LENGTH_SIZE128\fP+\fBSIZE128\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE256\fP   \fBMAX_LENGTH_SIZE128\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE256\fP   \fBINITIAL_LENGTH_SIZE256\fP+\fBSIZE256\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE512\fP   \fBMAX_LENGTH_SIZE256\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE512\fP   \fBINITIAL_LENGTH_SIZE512\fP+\fBSIZE512\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE1024\fP   \fBMAX_LENGTH_SIZE512\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE1024\fP   \fBINITIAL_LENGTH_SIZE1024\fP+\fBSIZE1024\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_SIZE2048\fP   \fBMAX_LENGTH_SIZE1024\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH_SIZE2048\fP   \fBINITIAL_LENGTH_SIZE2048\fP+\fBSIZE2048\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP-1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_LENGTH_REMAINING\fP   \fBMAX_LENGTH_SIZE2048\fP+1"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH\fP   1024*2048"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBstatus\fP { \fBTRUE\fP, \fBFALSE\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBcheck_for_space\fP (int size)"
+.br
+.ti -1c
+.RI "void * \fBmemory_alloc\fP (int size)"
+.br
+.ti -1c
+.RI "void * \fBmemory_calloc\fP (int nelem, int elsize)"
+.br
+.ti -1c
+.RI "void * \fBmemory_realloc\fP (void *ptr, int size)"
+.br
+.ti -1c
+.RI "int \fBmemory_size\fP (void *ptr)"
+.br
+.ti -1c
+.RI "int \fBused_blocks\fP (int size)"
+.br
+.ti -1c
+.RI "int \fBunused_blocks\fP (int size)"
+.br
+.ti -1c
+.RI "int \fBperform_alloc\fP (int minimum, int maximum, int start, int size)"
+.br
+.ti -1c
+.RI "int \fBcalculate_blocks\fP (int minimum, int maximum)"
+.br
+.ti -1c
+.RI "int \fBcalculate_free_blocks\fP (int minimum, int maximum)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBmemory_free\fP (void *pointer)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBdelete_pointer\fP (int minimum, int start, int size, void *ptr)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBblock_information\fP (void)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBfree_block_information\fP (void)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALL   0"
+
+.SS "#define BIT_AREA_MAX   \fBTOTAL_BYTES\fP-1"
+
+.SS "#define BIT_AREA_MIN   \fBSTART\fP"
+
+.SS "#define END_LENGTH_SIZE1024   \fBSTART_LENGTH_SIZE1024\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE128   \fBSTART_LENGTH_SIZE128\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE16   \fBSTART_LENGTH_SIZE16\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE2048   \fBSTART_LENGTH_SIZE2048\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE256   \fBSTART_LENGTH_SIZE256\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE32   \fBSTART_LENGTH_SIZE32\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE512   \fBSTART_LENGTH_SIZE512\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE64   \fBSTART_LENGTH_SIZE64\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP/8-1"
+
+.SS "#define END_LENGTH_SIZE8   \fBSTART_LENGTH_SIZE8\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP/8-1"
+
+.SS "#define INITIAL_LENGTH_REMAINING   \fBMAX_LENGTH_SIZE2048\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE1024   \fBMAX_LENGTH_SIZE512\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE128   \fBMAX_LENGTH_SIZE64\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE16   \fBMAX_LENGTH_SIZE8\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE2048   \fBMAX_LENGTH_SIZE1024\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE256   \fBMAX_LENGTH_SIZE128\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE32   \fBMAX_LENGTH_SIZE16\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE512   \fBMAX_LENGTH_SIZE256\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE64   \fBMAX_LENGTH_SIZE32\fP+1"
+
+.SS "#define INITIAL_LENGTH_SIZE8   \fBBIT_AREA_MAX\fP+1"
+
+.SS "#define MAX_LENGTH   1024*2048"
+
+.SS "#define MAX_LENGTH_SIZE1024   \fBINITIAL_LENGTH_SIZE1024\fP+\fBSIZE1024\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE128   \fBINITIAL_LENGTH_SIZE128\fP+\fBSIZE128\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE16   \fBINITIAL_LENGTH_SIZE16\fP+\fBSIZE16\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE2048   \fBINITIAL_LENGTH_SIZE2048\fP+\fBSIZE2048\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE256   \fBINITIAL_LENGTH_SIZE256\fP+\fBSIZE256\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE32   \fBINITIAL_LENGTH_SIZE32\fP+\fBSIZE32\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE512   \fBINITIAL_LENGTH_SIZE512\fP+\fBSIZE512\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE64   \fBINITIAL_LENGTH_SIZE64\fP+\fBSIZE64\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP-1"
+
+.SS "#define MAX_LENGTH_SIZE8   \fBINITIAL_LENGTH_SIZE8\fP+\fBSIZE8\fP*\fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP-1"
+
+.SS "#define SIZE   1"
+
+.SS "#define SIZE1024   1024"
+
+.SS "#define SIZE128   128"
+
+.SS "#define SIZE16   16"
+
+.SS "#define SIZE2048   2048"
+
+.SS "#define SIZE256   256"
+
+.SS "#define SIZE32   32"
+
+.SS "#define SIZE512   512"
+
+.SS "#define SIZE64   64"
+
+.SS "#define SIZE8   8"
+
+.SS "#define START   0"
+
+.SS "#define START_LENGTH_SIZE1024   \fBEND_LENGTH_SIZE512\fP+1"
+
+.SS "#define START_LENGTH_SIZE128   \fBEND_LENGTH_SIZE64\fP+1"
+
+.SS "#define START_LENGTH_SIZE16   \fBEND_LENGTH_SIZE8\fP+1"
+
+.SS "#define START_LENGTH_SIZE2048   \fBEND_LENGTH_SIZE1024\fP+1"
+
+.SS "#define START_LENGTH_SIZE256   \fBEND_LENGTH_SIZE128\fP+1"
+
+.SS "#define START_LENGTH_SIZE32   \fBEND_LENGTH_SIZE16\fP+1"
+
+.SS "#define START_LENGTH_SIZE512   \fBEND_LENGTH_SIZE256\fP+1"
+
+.SS "#define START_LENGTH_SIZE64   \fBEND_LENGTH_SIZE32\fP+1"
+
+.SS "#define START_LENGTH_SIZE8   \fBBIT_AREA_MIN\fP"
+
+.SS "#define TOTAL_BLOCKS   \fBTOTAL_BLOCKS_OF_SIZE_SIZE8\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE16\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE32\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE64\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE128\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE256\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE512\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE1024\fP+\fBTOTAL_BLOCKS_OF_SIZE_SIZE2048\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE1024   256*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE128   512*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE16   2048*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE2048   128*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE256   512*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE32   1024*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE512   256*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE64   1024*\fBSIZE\fP"
+
+.SS "#define TOTAL_BLOCKS_OF_SIZE_SIZE8   2048*\fBSIZE\fP"
+
+.SS "#define TOTAL_BYTES   \fBTOTAL_BLOCKS\fP/8"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBstatus\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRUE \fP\fP
+.TP
+\fB\fIFALSE \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "\fBstatus\fP block_information (void)"
+
+.SS "int calculate_blocks (int minimum, int maximum)"
+
+.SS "int calculate_free_blocks (int minimum, int maximum)"
+
+.SS "void* check_for_space (int size)"
+
+.SS "\fBstatus\fP delete_pointer (int minimum, int start, int size, void * ptr)"
+
+.SS "\fBstatus\fP free_block_information (void)"
+
+.SS "void* memory_alloc (int size)"
+
+.SS "void* memory_calloc (int nelem, int elsize)"
+
+.SS "\fBstatus\fP memory_free (void * pointer)"
+
+.SS "void* memory_realloc (void * ptr, int size)"
+
+.SS "int memory_size (void * ptr)"
+
+.SS "int perform_alloc (int minimum, int maximum, int start, int size)"
+
+.SS "int unused_blocks (int size)"
+
+.SS "int used_blocks (int size)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MEMORY MANAGEMENT from the source code\&.

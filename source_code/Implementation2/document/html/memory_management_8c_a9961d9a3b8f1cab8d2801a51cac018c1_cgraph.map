@@ -1,0 +1,6 @@
+<map id="block_information" name="block_information">
+<area shape="rect" id="node2" href="$memory_management_8c.html#a8758c4e9207b46696939c497d7688b74" title="used_blocks" alt="" coords="185,5,279,32"/>
+<area shape="rect" id="node4" href="$memory_management_8c.html#a84a886fa82e1e3db2ab9e16c3a3b1434" title="unused_blocks" alt="" coords="177,56,287,83"/>
+<area shape="rect" id="node3" href="$memory_management_8c.html#ab62a2cbf81f6577db0668f46aed364ef" title="calculate_blocks" alt="" coords="349,5,468,32"/>
+<area shape="rect" id="node5" href="$memory_management_8c.html#a156fe06c8c22c3783995e8c2ea0621b9" title="calculate_free_blocks" alt="" coords="335,56,483,83"/>
+</map>

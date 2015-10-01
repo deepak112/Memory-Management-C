@@ -1,0 +1,5 @@
+<map id="calculate_free_blocks" name="calculate_free_blocks">
+<area shape="rect" id="node2" href="$memory_management_8h.html#a84a886fa82e1e3db2ab9e16c3a3b1434" title="unused_blocks" alt="" coords="201,5,311,32"/>
+<area shape="rect" id="node3" href="$memory_management_8h.html#a9961d9a3b8f1cab8d2801a51cac018c1" title="block_information" alt="" coords="359,5,483,32"/>
+<area shape="rect" id="node4" href="$user_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="531,5,581,32"/>
+</map>

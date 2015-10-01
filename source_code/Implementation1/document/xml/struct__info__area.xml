@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="struct__info__area" kind="struct" language="C++" prot="public">
+    <compoundname>_info_area</compoundname>
+    <includes refid="memory_management_8h" local="no">memoryManagement.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__info__area_1a6e27f49150e9a14580fb313cc2777e00" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" line="66" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1ac30901f2f52d2898523245fe4ad744a0" compoundref="memory_management_8c" startline="128" endline="139">create_node</referencedby>
+        <referencedby refid="memory_management_8h_1a4445092804b80242b5a1c124978837e8" compoundref="memory_management_8c" startline="152" endline="180">memory_information</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="194" endline="205">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a0ee12c76feab0bfc62d67af9989f828d" compoundref="memory_management_8c" startline="221" endline="254">check_for_chunk_space</referencedby>
+        <referencedby refid="memory_management_8h_1a5e16e5d3309afde94b8d6f9fc6f2364a" compoundref="memory_management_8c" startline="357" endline="391">display_list</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__info__area_1a37722a150250e2a5a98e5e0d11e53449" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" line="67" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1ac30901f2f52d2898523245fe4ad744a0" compoundref="memory_management_8c" startline="128" endline="139">create_node</referencedby>
+        <referencedby refid="memory_management_8h_1a4445092804b80242b5a1c124978837e8" compoundref="memory_management_8c" startline="152" endline="180">memory_information</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="194" endline="205">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a0ee12c76feab0bfc62d67af9989f828d" compoundref="memory_management_8c" startline="221" endline="254">check_for_chunk_space</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="330" endline="344">memory_size</referencedby>
+        <referencedby refid="memory_management_8h_1a5e16e5d3309afde94b8d6f9fc6f2364a" compoundref="memory_management_8c" startline="357" endline="391">display_list</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__info__area_1abce9f5dc9c83f2639b72024fdee5d388" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" line="68" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1ac30901f2f52d2898523245fe4ad744a0" compoundref="memory_management_8c" startline="128" endline="139">create_node</referencedby>
+        <referencedby refid="memory_management_8h_1a4445092804b80242b5a1c124978837e8" compoundref="memory_management_8c" startline="152" endline="180">memory_information</referencedby>
+        <referencedby refid="memory_management_8h_1a0ee12c76feab0bfc62d67af9989f828d" compoundref="memory_management_8c" startline="221" endline="254">check_for_chunk_space</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="330" endline="344">memory_size</referencedby>
+        <referencedby refid="memory_management_8h_1a5e16e5d3309afde94b8d6f9fc6f2364a" compoundref="memory_management_8c" startline="357" endline="391">display_list</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__info__area_1a50e27729cb837299c9b6d2464b6ebff4" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__info__area" kindref="compound">_info_area</ref> *</type>
+        <definition>struct _info_area* next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" line="69" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a95bbb648d6b9dcbeb6377570f5dde789" compoundref="memory_management_8c" startline="99" endline="115">add_node_to_list</referencedby>
+        <referencedby refid="memory_management_8h_1ac30901f2f52d2898523245fe4ad744a0" compoundref="memory_management_8c" startline="128" endline="139">create_node</referencedby>
+        <referencedby refid="memory_management_8h_1a4445092804b80242b5a1c124978837e8" compoundref="memory_management_8c" startline="152" endline="180">memory_information</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="194" endline="205">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a0ee12c76feab0bfc62d67af9989f828d" compoundref="memory_management_8c" startline="221" endline="254">check_for_chunk_space</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="330" endline="344">memory_size</referencedby>
+        <referencedby refid="memory_management_8h_1a5e16e5d3309afde94b8d6f9fc6f2364a" compoundref="memory_management_8c" startline="357" endline="391">display_list</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>_info_area</label>
+        <link refid="struct__info__area"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" line="65" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation1/lib/memoryManagement.h" bodystart="64" bodyend="70"/>
+    <listofallmembers>
+      <member refid="struct__info__area_1abce9f5dc9c83f2639b72024fdee5d388" prot="public" virt="non-virtual"><scope>_info_area</scope><name>end</name></member>
+      <member refid="struct__info__area_1a50e27729cb837299c9b6d2464b6ebff4" prot="public" virt="non-virtual"><scope>_info_area</scope><name>next</name></member>
+      <member refid="struct__info__area_1a37722a150250e2a5a98e5e0d11e53449" prot="public" virt="non-virtual"><scope>_info_area</scope><name>start</name></member>
+      <member refid="struct__info__area_1a6e27f49150e9a14580fb313cc2777e00" prot="public" virt="non-virtual"><scope>_info_area</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

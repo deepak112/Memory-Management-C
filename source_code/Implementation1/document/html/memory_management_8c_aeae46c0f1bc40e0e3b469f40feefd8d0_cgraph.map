@@ -1,0 +1,8 @@
+<map id="memory_realloc" name="memory_realloc">
+<area shape="rect" id="node2" href="$memory_management_8c.html#ae30a35d507593a3635856b601305dd38" title="memory_alloc" alt="" coords="168,56,271,83"/>
+<area shape="rect" id="node6" href="$memory_management_8c.html#a401d53c4641dc4f12bc3251d36d1bfe3" title="memory_size" alt="" coords="169,107,269,133"/>
+<area shape="rect" id="node7" href="$memory_management_8c.html#a8a12d29f1824bf7225965e8b35a0f3a8" title="memory_free" alt="" coords="170,157,269,184"/>
+<area shape="rect" id="node3" href="$memory_management_8c.html#a0ee12c76feab0bfc62d67af9989f828d" title="check_for_chunk_space" alt="" coords="319,5,481,32"/>
+<area shape="rect" id="node4" href="$memory_management_8c.html#ae134f9f03edd9c11c52eb9e3887911da" title="add_node_to_list" alt="" coords="340,56,460,83"/>
+<area shape="rect" id="node5" href="$memory_management_8c.html#ac30901f2f52d2898523245fe4ad744a0" title="create_node" alt="" coords="353,107,447,133"/>
+</map>

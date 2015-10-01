@@ -1,0 +1,176 @@
+.TH "lib/memoryManagement.h" 3 "Thu Oct 1 2015" "Version version1" "MEMORY MANAGEMENT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/memoryManagement.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_info_area\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_SIZE\fP   1024*1024"
+.br
+.ti -1c
+.RI "#define \fBMAX_LENGTH\fP   1024"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_ZERO\fP   0"
+.br
+.ti -1c
+.RI "#define \fBEXCESS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBFILLED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBEMPTY\fP   0"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBstatus\fP { \fBTRUE\fP, \fBFALSE\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_info_area\fP * \fBcreate_node\fP (int size)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBadd_node_to_list\fP (struct \fB_info_area\fP *new_node)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBmemory_free\fP (void *pointer)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBmemory_information\fP ()"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBdisplay_list\fP ()"
+.br
+.ti -1c
+.RI "void * \fBmemory_alloc\fP (int size)"
+.br
+.ti -1c
+.RI "void * \fBcheck_for_chunk_space\fP (int size)"
+.br
+.ti -1c
+.RI "void * \fBmemory_realloc\fP (void *ptr, int size)"
+.br
+.ti -1c
+.RI "void * \fBmemory_calloc\fP (int nelem, int elsize)"
+.br
+.ti -1c
+.RI "int \fBmemory_size\fP (void *ptr)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBin\fP"
+.br
+.ti -1c
+.RI "int \fBareaIndex\fP"
+.br
+.ti -1c
+.RI "int \fBsizeOfNode\fP"
+.br
+.in -1c
+.SH "Data Structure Documentation"
+.PP 
+.SH "struct _info_area"
+.PP 
+\fBData Fields:\fP
+.RS 4
+int \fIend\fP 
+.br
+.PP
+struct \fB_info_area\fP * \fInext\fP 
+.br
+.PP
+int \fIstart\fP 
+.br
+.PP
+int \fIstatus\fP 
+.br
+.PP
+.RE
+.PP
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define EMPTY   0"
+
+.SS "#define EXCESS   1"
+
+.SS "#define FILLED   1"
+
+.SS "#define INITIAL_ZERO   0"
+
+.SS "#define MAX_LENGTH   1024"
+
+.SS "#define MAX_SIZE   1024*1024"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBstatus\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRUE \fP\fP
+.TP
+\fB\fIFALSE \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "\fBstatus\fP add_node_to_list (struct \fB_info_area\fP * new_node)"
+
+.SS "void* check_for_chunk_space (int size)"
+
+.SS "struct \fB_info_area\fP* create_node (int size)"
+
+.SS "\fBstatus\fP display_list ()"
+
+.SS "void* memory_alloc (int size)"
+
+.SS "void* memory_calloc (int nelem, int elsize)"
+
+.SS "\fBstatus\fP memory_free (void * pointer)"
+
+.SS "\fBstatus\fP memory_information ()"
+
+.SS "void* memory_realloc (void * ptr, int size)"
+
+.SS "int memory_size (void * ptr)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "int areaIndex"
+
+.SS "int in"
+
+.SS "int sizeOfNode"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MEMORY MANAGEMENT from the source code\&.

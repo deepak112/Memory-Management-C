@@ -1,0 +1,397 @@
+\hypertarget{memory_management_8c}{}\subsection{src/memory\+Management.c File Reference}
+\label{memory_management_8c}\index{src/memory\+Management.\+c@{src/memory\+Management.\+c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}memory\+Management.\+h\char`\"{}}\\*
+Include dependency graph for memory\+Management.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{memory_management_8c__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{memory_management_8c_aaa1cfd5c78cb649d31cdcf5056523f9c}{perform\+\_\+alloc} (int minimum, int maximum, int start, int size)
+\item 
+void $\ast$ \hyperlink{memory_management_8c_aea43d1dfada1be33a518865f1dfec034}{check\+\_\+for\+\_\+space} (int size)
+\item 
+void $\ast$ \hyperlink{memory_management_8c_ae30a35d507593a3635856b601305dd38}{memory\+\_\+alloc} (int size)
+\item 
+\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8c_a8a12d29f1824bf7225965e8b35a0f3a8}{memory\+\_\+free} (void $\ast$pointer)
+\item 
+\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8c_a163c8fc7314dff46f38171fe7e652ade}{delete\+\_\+pointer} (int minimum, int start, int size, void $\ast$ptr)
+\item 
+void $\ast$ \hyperlink{memory_management_8c_a9fddae3713297adcee22fae422fe4383}{memory\+\_\+calloc} (int nelem, int elsize)
+\item 
+void $\ast$ \hyperlink{memory_management_8c_aeae46c0f1bc40e0e3b469f40feefd8d0}{memory\+\_\+realloc} (void $\ast$ptr, int size)
+\item 
+int \hyperlink{memory_management_8c_a3e2309af44a44009e20dea96b76a5f06}{memory\+\_\+size} (void $\ast$ptr)
+\item 
+\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8c_a9961d9a3b8f1cab8d2801a51cac018c1}{block\+\_\+information} (void)
+\item 
+int \hyperlink{memory_management_8c_a8758c4e9207b46696939c497d7688b74}{used\+\_\+blocks} (int size)
+\item 
+int \hyperlink{memory_management_8c_ab62a2cbf81f6577db0668f46aed364ef}{calculate\+\_\+blocks} (int minimum, int maximum)
+\item 
+int \hyperlink{memory_management_8c_a84a886fa82e1e3db2ab9e16c3a3b1434}{unused\+\_\+blocks} (int size)
+\item 
+int \hyperlink{memory_management_8c_a156fe06c8c22c3783995e8c2ea0621b9}{calculate\+\_\+free\+\_\+blocks} (int minimum, int maximum)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{memory_management_8c_a9961d9a3b8f1cab8d2801a51cac018c1}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!block\+\_\+information@{block\+\_\+information}}
+\index{block\+\_\+information@{block\+\_\+information}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{block\+\_\+information}]{\setlength{\rightskip}{0pt plus 5cm}{\bf status} block\+\_\+information (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a9961d9a3b8f1cab8d2801a51cac018c1}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a9961d9a3b8f1cab8d2801a51cac018c1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{memory_management_8c_a9961d9a3b8f1cab8d2801a51cac018c1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_ab62a2cbf81f6577db0668f46aed364ef}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!calculate\+\_\+blocks@{calculate\+\_\+blocks}}
+\index{calculate\+\_\+blocks@{calculate\+\_\+blocks}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{calculate\+\_\+blocks}]{\setlength{\rightskip}{0pt plus 5cm}int calculate\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{int}]{minimum, }
+\item[{int}]{maximum}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_ab62a2cbf81f6577db0668f46aed364ef}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_ab62a2cbf81f6577db0668f46aed364ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a156fe06c8c22c3783995e8c2ea0621b9}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!calculate\+\_\+free\+\_\+blocks@{calculate\+\_\+free\+\_\+blocks}}
+\index{calculate\+\_\+free\+\_\+blocks@{calculate\+\_\+free\+\_\+blocks}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{calculate\+\_\+free\+\_\+blocks}]{\setlength{\rightskip}{0pt plus 5cm}int calculate\+\_\+free\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{int}]{minimum, }
+\item[{int}]{maximum}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a156fe06c8c22c3783995e8c2ea0621b9}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a156fe06c8c22c3783995e8c2ea0621b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_aea43d1dfada1be33a518865f1dfec034}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!check\+\_\+for\+\_\+space@{check\+\_\+for\+\_\+space}}
+\index{check\+\_\+for\+\_\+space@{check\+\_\+for\+\_\+space}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{check\+\_\+for\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ check\+\_\+for\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_aea43d1dfada1be33a518865f1dfec034}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{memory_management_8c_aea43d1dfada1be33a518865f1dfec034_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_aea43d1dfada1be33a518865f1dfec034_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a163c8fc7314dff46f38171fe7e652ade}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!delete\+\_\+pointer@{delete\+\_\+pointer}}
+\index{delete\+\_\+pointer@{delete\+\_\+pointer}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{delete\+\_\+pointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf status} delete\+\_\+pointer (
+\begin{DoxyParamCaption}
+\item[{int}]{minimum, }
+\item[{int}]{start, }
+\item[{int}]{size, }
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a163c8fc7314dff46f38171fe7e652ade}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a163c8fc7314dff46f38171fe7e652ade_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_ae30a35d507593a3635856b601305dd38}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!memory\+\_\+alloc@{memory\+\_\+alloc}}
+\index{memory\+\_\+alloc@{memory\+\_\+alloc}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{memory\+\_\+alloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ memory\+\_\+alloc (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_ae30a35d507593a3635856b601305dd38}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_ae30a35d507593a3635856b601305dd38_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_ae30a35d507593a3635856b601305dd38_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a9fddae3713297adcee22fae422fe4383}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!memory\+\_\+calloc@{memory\+\_\+calloc}}
+\index{memory\+\_\+calloc@{memory\+\_\+calloc}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{memory\+\_\+calloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ memory\+\_\+calloc (
+\begin{DoxyParamCaption}
+\item[{int}]{nelem, }
+\item[{int}]{elsize}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a9fddae3713297adcee22fae422fe4383}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a9fddae3713297adcee22fae422fe4383_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{memory_management_8c_a9fddae3713297adcee22fae422fe4383_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a8a12d29f1824bf7225965e8b35a0f3a8}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!memory\+\_\+free@{memory\+\_\+free}}
+\index{memory\+\_\+free@{memory\+\_\+free}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{memory\+\_\+free}]{\setlength{\rightskip}{0pt plus 5cm}{\bf status} memory\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pointer}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a8a12d29f1824bf7225965e8b35a0f3a8}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{memory_management_8c_a8a12d29f1824bf7225965e8b35a0f3a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a8a12d29f1824bf7225965e8b35a0f3a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_aeae46c0f1bc40e0e3b469f40feefd8d0}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!memory\+\_\+realloc@{memory\+\_\+realloc}}
+\index{memory\+\_\+realloc@{memory\+\_\+realloc}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{memory\+\_\+realloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ memory\+\_\+realloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_aeae46c0f1bc40e0e3b469f40feefd8d0}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_aeae46c0f1bc40e0e3b469f40feefd8d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{memory_management_8c_aeae46c0f1bc40e0e3b469f40feefd8d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a3e2309af44a44009e20dea96b76a5f06}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!memory\+\_\+size@{memory\+\_\+size}}
+\index{memory\+\_\+size@{memory\+\_\+size}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{memory\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int memory\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a3e2309af44a44009e20dea96b76a5f06}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a3e2309af44a44009e20dea96b76a5f06_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_aaa1cfd5c78cb649d31cdcf5056523f9c}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!perform\+\_\+alloc@{perform\+\_\+alloc}}
+\index{perform\+\_\+alloc@{perform\+\_\+alloc}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{perform\+\_\+alloc}]{\setlength{\rightskip}{0pt plus 5cm}int perform\+\_\+alloc (
+\begin{DoxyParamCaption}
+\item[{int}]{minimum, }
+\item[{int}]{maximum, }
+\item[{int}]{start, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_aaa1cfd5c78cb649d31cdcf5056523f9c}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_aaa1cfd5c78cb649d31cdcf5056523f9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a84a886fa82e1e3db2ab9e16c3a3b1434}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!unused\+\_\+blocks@{unused\+\_\+blocks}}
+\index{unused\+\_\+blocks@{unused\+\_\+blocks}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{unused\+\_\+blocks}]{\setlength{\rightskip}{0pt plus 5cm}int unused\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a84a886fa82e1e3db2ab9e16c3a3b1434}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{memory_management_8c_a84a886fa82e1e3db2ab9e16c3a3b1434_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a84a886fa82e1e3db2ab9e16c3a3b1434_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{memory_management_8c_a8758c4e9207b46696939c497d7688b74}{}\index{memory\+Management.\+c@{memory\+Management.\+c}!used\+\_\+blocks@{used\+\_\+blocks}}
+\index{used\+\_\+blocks@{used\+\_\+blocks}!memory\+Management.\+c@{memory\+Management.\+c}}
+\paragraph[{used\+\_\+blocks}]{\setlength{\rightskip}{0pt plus 5cm}int used\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{memory_management_8c_a8758c4e9207b46696939c497d7688b74}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{memory_management_8c_a8758c4e9207b46696939c497d7688b74_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_management_8c_a8758c4e9207b46696939c497d7688b74_icgraph}
+\end{center}
+\end{figure}
+
+

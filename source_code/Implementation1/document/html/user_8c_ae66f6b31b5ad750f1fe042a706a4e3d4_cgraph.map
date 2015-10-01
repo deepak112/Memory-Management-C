@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$memory_management_8c.html#ae30a35d507593a3635856b601305dd38" title="memory_alloc" alt="" coords="292,56,395,83"/>
+<area shape="rect" id="node6" href="$memory_management_8c.html#a9fddae3713297adcee22fae422fe4383" title="memory_calloc" alt="" coords="119,56,229,83"/>
+<area shape="rect" id="node7" href="$memory_management_8c.html#a8a12d29f1824bf7225965e8b35a0f3a8" title="memory_free" alt="" coords="294,157,393,184"/>
+<area shape="rect" id="node8" href="$memory_management_8c.html#aeae46c0f1bc40e0e3b469f40feefd8d0" title="memory_realloc" alt="" coords="117,107,231,133"/>
+<area shape="rect" id="node10" href="$memory_management_8c.html#a4445092804b80242b5a1c124978837e8" title="memory_information" alt="" coords="104,208,244,235"/>
+<area shape="rect" id="node11" href="$memory_management_8c.html#a5e16e5d3309afde94b8d6f9fc6f2364a" title="display_list" alt="" coords="131,259,217,285"/>
+<area shape="rect" id="node3" href="$memory_management_8c.html#a0ee12c76feab0bfc62d67af9989f828d" title="check_for_chunk_space" alt="" coords="443,5,605,32"/>
+<area shape="rect" id="node4" href="$memory_management_8c.html#ae134f9f03edd9c11c52eb9e3887911da" title="add_node_to_list" alt="" coords="464,56,584,83"/>
+<area shape="rect" id="node5" href="$memory_management_8c.html#ac30901f2f52d2898523245fe4ad744a0" title="create_node" alt="" coords="477,107,571,133"/>
+<area shape="rect" id="node9" href="$memory_management_8c.html#a401d53c4641dc4f12bc3251d36d1bfe3" title="memory_size" alt="" coords="293,107,393,133"/>
+</map>

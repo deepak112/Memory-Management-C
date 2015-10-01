@@ -1,0 +1,5 @@
+<map id="delete_pointer" name="delete_pointer">
+<area shape="rect" id="node2" href="$memory_management_8h.html#a8a12d29f1824bf7225965e8b35a0f3a8" title="memory_free" alt="" coords="156,31,255,57"/>
+<area shape="rect" id="node3" href="$memory_management_8h.html#aeae46c0f1bc40e0e3b469f40feefd8d0" title="memory_realloc" alt="" coords="303,5,417,32"/>
+<area shape="rect" id="node4" href="$user_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="465,31,516,57"/>
+</map>

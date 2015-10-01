@@ -1,0 +1,99 @@
+\hypertarget{memory_management_8h_source}{}\subsection{memory\+Management.\+h}
+\label{memory_management_8h_source}\index{lib/memory\+Management.\+h@{lib/memory\+Management.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/*******************************************************************************                           
+                 }
+00002 \textcolor{comment}{ *                        memoryManagement.h}
+00003 \textcolor{comment}{ ******************************************************************************/}
+00004 \textcolor{comment}{/*******************************************************************************}
+00005 \textcolor{comment}{ * @file   memoryManagement.h}
+00006 \textcolor{comment}{ * @brief  This program has the library functions for allocating memory,}
+00007 \textcolor{comment}{           deallocating memory and displaying the size of free memory and }
+00008 \textcolor{comment}{           allocated memory.Here the memory management is done in stack segment}
+00009 \textcolor{comment}{           since the space called "Allocated heap Space" is assigned in stack}
+00010 \textcolor{comment}{           segment of the system architecture. }
+00011 \textcolor{comment}{          *memory\_alloc function-This function provides memory dynamically to }
+00012 \textcolor{comment}{           user.  }
+00013 \textcolor{comment}{          *memory\_free function-This function frees the space allocated for the}
+00014 \textcolor{comment}{           user in the created heap space under user's request.}
+00015 \textcolor{comment}{          *memory\_calloc function-This function provides memory dynamically to }
+00016 \textcolor{comment}{           user in asked number of blocks of specified size and intialise them }
+00017 \textcolor{comment}{           to zero.}
+00018 \textcolor{comment}{          *memory\_realloc function-This function reallocates memory to the }
+00019 \textcolor{comment}{           previously allocated memory pointer by asking the user ,the already }
+00020 \textcolor{comment}{           allocated pointer and size to be allocated.}
+00021 \textcolor{comment}{          *memory\_size function- This function calculates the size of pointer.}
+00022 \textcolor{comment}{          *memory\_information-This function gives the information about how much}
+00023 \textcolor{comment}{           memory is allocated and how much memory is free in given allocated}
+00024 \textcolor{comment}{           space.  }
+00025 \textcolor{comment}{ ******************************************************************************/}
+00026 
+00027 
+00028 \textcolor{preprocessor}{#ifndef  MEMORYMANAGEMENT\_H\_}
+00029 \textcolor{preprocessor}{#define  MEMORYMANAGEMENT\_H\_}
+00030 
+00031 \textcolor{comment}{/*******************************************************************************}
+00032 \textcolor{comment}{ * Include files}
+00033 \textcolor{comment}{ ******************************************************************************/}
+00034 
+00035 \textcolor{preprocessor}{#include<stdio.h>}
+00036 \textcolor{preprocessor}{#include<stdlib.h>}
+00037 \textcolor{preprocessor}{#include<string.h>}
+00038 
+00039 \textcolor{comment}{/*******************************************************************************}
+00040 \textcolor{comment}{ * MACRO DEFINITION}
+00041 \textcolor{comment}{ ******************************************************************************/}
+00042 
+\hypertarget{memory_management_8h_source_l00043}{}\hyperlink{memory_management_8h_a0592dba56693fad79136250c11e5a7fe}{00043} \textcolor{preprocessor}{#define MAX\_SIZE       1024*1024}
+\hypertarget{memory_management_8h_source_l00044}{}\hyperlink{memory_management_8h_a7a9a231e30b47bc0345749c8bd1e5077}{00044} \textcolor{preprocessor}{#define MAX\_LENGTH     1024}
+\hypertarget{memory_management_8h_source_l00045}{}\hyperlink{memory_management_8h_a4d11bc62f87fecb66ddb08bbe922e468}{00045} \textcolor{preprocessor}{#define INITIAL\_ZERO   0}
+\hypertarget{memory_management_8h_source_l00046}{}\hyperlink{memory_management_8h_a5ce8e34830796387c57019ed0548fef1}{00046} \textcolor{preprocessor}{#define EXCESS         1}
+\hypertarget{memory_management_8h_source_l00047}{}\hyperlink{memory_management_8h_a07f4c6f14c1c3bcd57756a5e3a41e3bd}{00047} \textcolor{preprocessor}{#define FILLED         1}
+\hypertarget{memory_management_8h_source_l00048}{}\hyperlink{memory_management_8h_a2b7cf2a3641be7b89138615764d60ba3}{00048} \textcolor{preprocessor}{#define EMPTY          0}
+00049 \textcolor{comment}{/*******************************************************************************}
+00050 \textcolor{comment}{ * ENUM DEFINATION}
+00051 \textcolor{comment}{ ******************************************************************************/}
+00052 
+\hypertarget{memory_management_8h_source_l00053}{}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{00053} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}
+00054 \{
+\hypertarget{memory_management_8h_source_l00055}{}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839}{00055}     \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839}{TRUE},
+\hypertarget{memory_management_8h_source_l00056}{}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a}{00056}     \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}
+00057 \}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status};
+00058 
+00059 \textcolor{comment}{/*******************************************************************************}
+00060 \textcolor{comment}{ * STRUCTURE DEFINITION.THIS STRUCTURE DEFINES A NODE WHICH HAS THREE VARIABLES }
+00061 \textcolor{comment}{ * AND SELF REFERENCING POINTER WHICH POINTS TO ADDRES OF THE NEXT NODE.}
+00062 \textcolor{comment}{*******************************************************************************/}
+00063 
+\hypertarget{memory_management_8h_source_l00064}{}\hyperlink{memory_management_8h}{00064} \textcolor{keyword}{struct }\hyperlink{memory_management_8h_struct__info__area}{\_info\_area}
+00065 \{
+\hypertarget{memory_management_8h_source_l00066}{}\hyperlink{memory_management_8h_a6e27f49150e9a14580fb313cc2777e00}{00066}     \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a6e27f49150e9a14580fb313cc2777e00}{status};
+\hypertarget{memory_management_8h_source_l00067}{}\hyperlink{memory_management_8h_a37722a150250e2a5a98e5e0d11e53449}{00067}     \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a37722a150250e2a5a98e5e0d11e53449}{start};
+\hypertarget{memory_management_8h_source_l00068}{}\hyperlink{memory_management_8h_abce9f5dc9c83f2639b72024fdee5d388}{00068}     \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_abce9f5dc9c83f2639b72024fdee5d388}{end};
+\hypertarget{memory_management_8h_source_l00069}{}\hyperlink{memory_management_8h_a50e27729cb837299c9b6d2464b6ebff4}{00069}     \textcolor{keyword}{struct }\hyperlink{memory_management_8h_struct__info__area}{\_info\_area} *\hyperlink{memory_management_8h_a50e27729cb837299c9b6d2464b6ebff4}{next};
+00070 \};
+00071 
+00072 \textcolor{comment}{/*******************************************************************************}
+00073 \textcolor{comment}{ * EXTERNAL VARIABLE DECLARATION}
+00074 \textcolor{comment}{ ******************************************************************************/}
+00075 
+00076 \textcolor{keyword}{static} \textcolor{keywordtype}{char} heapArea[\hyperlink{memory_management_8h_a0592dba56693fad79136250c11e5a7fe}{MAX\_SIZE}] ;
+00077 \textcolor{keyword}{static} \textcolor{keywordtype}{char} infoArea[\hyperlink{memory_management_8h_a7a9a231e30b47bc0345749c8bd1e5077}{MAX\_LENGTH} * \textcolor{keyword}{sizeof}( \textcolor{keyword}{struct }\hyperlink{memory_management_8h_struct__info__area}{\_info\_area} )] ;
+00078 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a26aeebe75887b4360c73659342f5dc61}{in} , \hyperlink{memory_management_8h_ac2101dd85dcd849ee5f0a1c192015c68}{areaIndex} , \hyperlink{memory_management_8h_a1aa769b6f82cf2e92f748561d87a8ca6}{sizeOfNode} ;
+00079 
+00080 \textcolor{comment}{/*******************************************************************************}
+00081 \textcolor{comment}{ * API DECLARATION}
+00082 \textcolor{comment}{ ******************************************************************************/}
+00083 \textcolor{keyword}{struct }\hyperlink{memory_management_8h_struct__info__area}{\_info\_area}* \hyperlink{memory_management_8h_ac30901f2f52d2898523245fe4ad744a0}{create\_node}(\textcolor{keywordtype}{int} size);
+00084 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a95bbb648d6b9dcbeb6377570f5dde789}{add\_node\_to\_list}(\textcolor{keyword}{struct} \hyperlink{memory_management_8h_struct__info__area}{\_info\_area} *new\_node);
+00085 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a8a12d29f1824bf7225965e8b35a0f3a8}{memory\_free}(\textcolor{keywordtype}{void} *pointer);
+00086 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a4445092804b80242b5a1c124978837e8}{memory\_information}();
+00087 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a5e16e5d3309afde94b8d6f9fc6f2364a}{display\_list}();
+00088 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_ae30a35d507593a3635856b601305dd38}{memory\_alloc}( \textcolor{keywordtype}{int} size ); 
+00089 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_a0ee12c76feab0bfc62d67af9989f828d}{check\_for\_chunk\_space}(\textcolor{keywordtype}{int} size);
+00090 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_aeae46c0f1bc40e0e3b469f40feefd8d0}{memory\_realloc}(\textcolor{keywordtype}{void} * ptr, \textcolor{keywordtype}{int} size);
+00091 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_a9fddae3713297adcee22fae422fe4383}{memory\_calloc}(\textcolor{keywordtype}{int} nelem, \textcolor{keywordtype}{int} elsize);
+00092 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a3e2309af44a44009e20dea96b76a5f06}{memory\_size}(\textcolor{keywordtype}{void} *ptr);
+00093 \textcolor{preprocessor}{#endif }\textcolor{comment}{/*  MEMORYMANAGEMENT\_H\_ */}\textcolor{preprocessor}{}
+\end{DoxyCode}

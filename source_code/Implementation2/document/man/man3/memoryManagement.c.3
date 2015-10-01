@@ -1,0 +1,87 @@
+.TH "src/memoryManagement.c" 3 "Thu Oct 1 2015" "Version version2" "MEMORY MANAGEMENT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/memoryManagement.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include 'memoryManagement\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBperform_alloc\fP (int minimum, int maximum, int start, int size)"
+.br
+.ti -1c
+.RI "void * \fBcheck_for_space\fP (int size)"
+.br
+.ti -1c
+.RI "void * \fBmemory_alloc\fP (int size)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBmemory_free\fP (void *pointer)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBdelete_pointer\fP (int minimum, int start, int size, void *ptr)"
+.br
+.ti -1c
+.RI "void * \fBmemory_calloc\fP (int nelem, int elsize)"
+.br
+.ti -1c
+.RI "void * \fBmemory_realloc\fP (void *ptr, int size)"
+.br
+.ti -1c
+.RI "int \fBmemory_size\fP (void *ptr)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBblock_information\fP (void)"
+.br
+.ti -1c
+.RI "int \fBused_blocks\fP (int size)"
+.br
+.ti -1c
+.RI "int \fBcalculate_blocks\fP (int minimum, int maximum)"
+.br
+.ti -1c
+.RI "int \fBunused_blocks\fP (int size)"
+.br
+.ti -1c
+.RI "int \fBcalculate_free_blocks\fP (int minimum, int maximum)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBstatus\fP block_information (void)"
+
+.SS "int calculate_blocks (int minimum, int maximum)"
+
+.SS "int calculate_free_blocks (int minimum, int maximum)"
+
+.SS "void* check_for_space (int size)"
+
+.SS "\fBstatus\fP delete_pointer (int minimum, int start, int size, void * ptr)"
+
+.SS "void* memory_alloc (int size)"
+
+.SS "void* memory_calloc (int nelem, int elsize)"
+
+.SS "\fBstatus\fP memory_free (void * pointer)"
+
+.SS "void* memory_realloc (void * ptr, int size)"
+
+.SS "int memory_size (void * ptr)"
+
+.SS "int perform_alloc (int minimum, int maximum, int start, int size)"
+
+.SS "int unused_blocks (int size)"
+
+.SS "int used_blocks (int size)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MEMORY MANAGEMENT from the source code\&.

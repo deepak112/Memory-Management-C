@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.9.1">
+  <compound refid="struct__info__area" kind="struct"><name>_info_area</name>
+    <member refid="struct__info__area_1a6e27f49150e9a14580fb313cc2777e00" kind="variable"><name>status</name></member>
+    <member refid="struct__info__area_1a37722a150250e2a5a98e5e0d11e53449" kind="variable"><name>start</name></member>
+    <member refid="struct__info__area_1abce9f5dc9c83f2639b72024fdee5d388" kind="variable"><name>end</name></member>
+    <member refid="struct__info__area_1a50e27729cb837299c9b6d2464b6ebff4" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="memory_management_8h" kind="file"><name>memoryManagement.h</name>
+    <member refid="memory_management_8h_1a0592dba56693fad79136250c11e5a7fe" kind="define"><name>MAX_SIZE</name></member>
+    <member refid="memory_management_8h_1a7a9a231e30b47bc0345749c8bd1e5077" kind="define"><name>MAX_LENGTH</name></member>
+    <member refid="memory_management_8h_1a4d11bc62f87fecb66ddb08bbe922e468" kind="define"><name>INITIAL_ZERO</name></member>
+    <member refid="memory_management_8h_1a5ce8e34830796387c57019ed0548fef1" kind="define"><name>EXCESS</name></member>
+    <member refid="memory_management_8h_1a07f4c6f14c1c3bcd57756a5e3a41e3bd" kind="define"><name>FILLED</name></member>
+    <member refid="memory_management_8h_1a2b7cf2a3641be7b89138615764d60ba3" kind="define"><name>EMPTY</name></member>
+    <member refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kind="enum"><name>status</name></member>
+    <member refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" kind="enumvalue"><name>TRUE</name></member>
+    <member refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a" kind="enumvalue"><name>FALSE</name></member>
+    <member refid="memory_management_8h_1a4f92a3e5c16c107636c7a4d1a2f05880" kind="variable"><name>heapArea</name></member>
+    <member refid="memory_management_8h_1a97e92133376f5974966a5db902e91f1c" kind="variable"><name>infoArea</name></member>
+    <member refid="memory_management_8h_1a26aeebe75887b4360c73659342f5dc61" kind="variable"><name>in</name></member>
+    <member refid="memory_management_8h_1ac2101dd85dcd849ee5f0a1c192015c68" kind="variable"><name>areaIndex</name></member>
+    <member refid="memory_management_8h_1a1aa769b6f82cf2e92f748561d87a8ca6" kind="variable"><name>sizeOfNode</name></member>
+    <member refid="memory_management_8h_1ac30901f2f52d2898523245fe4ad744a0" kind="function"><name>create_node</name></member>
+    <member refid="memory_management_8h_1a95bbb648d6b9dcbeb6377570f5dde789" kind="function"><name>add_node_to_list</name></member>
+    <member refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" kind="function"><name>memory_free</name></member>
+    <member refid="memory_management_8h_1a4445092804b80242b5a1c124978837e8" kind="function"><name>memory_information</name></member>
+    <member refid="memory_management_8h_1a5e16e5d3309afde94b8d6f9fc6f2364a" kind="function"><name>display_list</name></member>
+    <member refid="memory_management_8h_1ae30a35d507593a3635856b601305dd38" kind="function"><name>memory_alloc</name></member>
+    <member refid="memory_management_8h_1a0ee12c76feab0bfc62d67af9989f828d" kind="function"><name>check_for_chunk_space</name></member>
+    <member refid="memory_management_8h_1aeae46c0f1bc40e0e3b469f40feefd8d0" kind="function"><name>memory_realloc</name></member>
+    <member refid="memory_management_8h_1a9fddae3713297adcee22fae422fe4383" kind="function"><name>memory_calloc</name></member>
+    <member refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" kind="function"><name>memory_size</name></member>
+  </compound>
+  <compound refid="memory_management_8c" kind="file"><name>memoryManagement.c</name>
+    <member refid="memory_management_8c_1a64b0840001d30ff8cd416759a03542ce" kind="variable"><name>in</name></member>
+    <member refid="memory_management_8c_1a076f09d09570b6fb22632de428a3ec5e" kind="variable"><name>areaIndex</name></member>
+    <member refid="memory_management_8c_1a7d545f1851a11aa5a292886d35957bdc" kind="variable"><name>sizeOfNode</name></member>
+    <member refid="memory_management_8c_1a13b95480ca1ec551d303fb6b31b5ee9d" kind="variable"><name>head</name></member>
+    <member refid="memory_management_8c_1addbea52120befa5218ab585272604dd5" kind="variable"><name>current</name></member>
+    <member refid="memory_management_8c_1ae30a35d507593a3635856b601305dd38" kind="function"><name>memory_alloc</name></member>
+    <member refid="memory_management_8c_1ae134f9f03edd9c11c52eb9e3887911da" kind="function"><name>add_node_to_list</name></member>
+    <member refid="memory_management_8c_1ac30901f2f52d2898523245fe4ad744a0" kind="function"><name>create_node</name></member>
+    <member refid="memory_management_8c_1a4445092804b80242b5a1c124978837e8" kind="function"><name>memory_information</name></member>
+    <member refid="memory_management_8c_1a8a12d29f1824bf7225965e8b35a0f3a8" kind="function"><name>memory_free</name></member>
+    <member refid="memory_management_8c_1a0ee12c76feab0bfc62d67af9989f828d" kind="function"><name>check_for_chunk_space</name></member>
+    <member refid="memory_management_8c_1a9fddae3713297adcee22fae422fe4383" kind="function"><name>memory_calloc</name></member>
+    <member refid="memory_management_8c_1aeae46c0f1bc40e0e3b469f40feefd8d0" kind="function"><name>memory_realloc</name></member>
+    <member refid="memory_management_8c_1a401d53c4641dc4f12bc3251d36d1bfe3" kind="function"><name>memory_size</name></member>
+    <member refid="memory_management_8c_1a5e16e5d3309afde94b8d6f9fc6f2364a" kind="function"><name>display_list</name></member>
+  </compound>
+  <compound refid="user_8c" kind="file"><name>user.c</name>
+    <member refid="user_8c_1a1719f306508f813a37cd7d28e2c53435" kind="define"><name>ERR_NO_NUM</name></member>
+    <member refid="user_8c_1a6332413b933f27d85c87c288f5b0d260" kind="define"><name>ERR_NO_MEM</name></member>
+    <member refid="user_8c_1a0592dba56693fad79136250c11e5a7fe" kind="define"><name>MAX_SIZE</name></member>
+    <member refid="user_8c_1a7556679f2a7178d92c14f8f311c592b9" kind="define"><name>MALLOC_MAX_SIZE</name></member>
+    <member refid="user_8c_1a3f900af529705a735196fabffa13dd66" kind="define"><name>CALLOC_MAX_SIZE</name></member>
+    <member refid="user_8c_1abcb0b28b93251f50ed0d9a89040cda61" kind="define"><name>CALLOC_MAX_ELEMENTS</name></member>
+    <member refid="user_8c_1a12b95e73e5048ea0419f593afae7240c" kind="define"><name>REALLOC_MAX_SIZE</name></member>
+    <member refid="user_8c_1adc26eb8c308ee1308c09c2aab7b8a98e" kind="function"><name>myRandom</name></member>
+    <member refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

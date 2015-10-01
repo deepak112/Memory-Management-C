@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+char a[10];
+char *p,*q;
+int i;
+p=a;
+q=a+2;
+//printf("%d\n",q);
+//printf("%d\n",p);
+printf("%d\n",q-p);
+for(i=0;i<10;i++)
+printf("%d : %d : %d\n",p+i,i,a[i]);
+
+}

@@ -1,0 +1,214 @@
+/*******************************************************************************                                      
+ *                        user.c
+ ******************************************************************************/
+/*******************************************************************************
+ * @file user.c
+ * This program is a testing module for the library "memoryManagement.h".This 
+ * program tests automatically the library by self generating random numbers 
+ * and for respective numbers ,respective sizes are allocated in the datasegment
+ * User is asked for number of memmory_alloc function he wants to perform and 
+ * number of memory_free function he wants to perform and according to that 
+ * various test cases are randomly generated and functions are done and during
+ * display every information is shown.  
+ 
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Include files
+ ******************************************************************************/
+
+#include"memoryManagement.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+/*******************************************************************************
+ * MACRO DEFINITION
+ ******************************************************************************/
+#define ERR_NO_NUM              -1
+#define ERR_NO_MEM              -2
+#define MAX_SIZE                5000
+#define MALLOC_MAX_SIZE         2048
+#define CALLOC_MAX_SIZE         50
+#define CALLOC_MAX_ELEMENTS     20
+#define REALLOC_MAX_SIZE        2048
+/*******************************************************************************
+ * API DECLARATION
+ ******************************************************************************/
+/*******************************************************************************
+ * Brief - This function generates random numbers for performing testing of the 
+ * header file "memoryManagement.h". 
+ * Param[in]  - size - It takes size as arguement from user 
+ * Return     - It returns an integer which is a random number of any range.
+ ******************************************************************************/
+int myRandom (int size) {
+    int index, number;
+    static int numNums = 0;
+    static int *numArr = NULL;
+    if (size >= 0) 
+	{
+        if (numArr != NULL)
+		{
+            free (numArr);
+		}
+        if ((numArr = malloc (sizeof(int) * size)) == NULL)
+		{
+            return ERR_NO_MEM;
+		}
+        for (index = 0; index  < size; index++)
+       	{ 
+		    numArr[index] = index;
+		}
+        numNums = size;
+    }
+    if ( 0 == numNums )	
+	{
+       return ERR_NO_NUM;
+	}
+    number = rand() % numNums; /* to genearate random numbers */
+    index = numArr[number];
+    numArr[number] = numArr[numNums-1];
+    numNums--;
+    if ( 0 == numNums) 
+	{
+        free (numArr);
+        numArr = 0;
+    }
+
+    return index;
+}
+/*******************************************************************************
+ * API DECLARATION
+ ******************************************************************************/
+/*******************************************************************************
+ * Brief - This is the main function in which various functions are tested using 
+ * switch cases ,user is given with menu where every function is tested and by 
+ * calling memory_information each details are shown to the user. 
+ ******************************************************************************/
+int main()
+{	
+    int menuChoice = 0 , subMenuChoice = 0, size = 0 , totalElements = 0;
+    char choice ='y';
+    int **pointer;
+    int	index , number = 0, *arrayPointer[MAX_SIZE], numFree = 0, numRealloc, random, *previousAddress, num;
+    pointer = arrayPointer;
+    do
+    {
+    __fpurge(stdin);
+    system("clear");
+    printf("\n\n\t\tMENU\n\t1. Use memory_alloc or Use memory_calloc\n\t2. Use memory_free\n\t3. Use memory_realloc");
+    printf("\n\t4. memory_information\n\t5. free everything\n\t6. display list");
+    printf("\n\nEnter your menuChoice :");
+    scanf("%d" , &menuChoice);
+    switch(menuChoice)
+    {
+	case 1:	
+	    system("clear");
+	    printf("\n\n\t\tSUB-MENU\n\t1. Use memory_alloc \n\t2. Use memory_calloc\n\nEnter your menuChoice :");
+	    scanf("%d" , &subMenuChoice);
+            switch(subMenuChoice)
+            {
+                case 1:
+            	    system("clear");
+	            printf("How many memory_alloc calls u want :");
+	    	    scanf("%d",&num);
+            	    printf("Size\tAddress\n-----------------\n");
+            	    for(index = number ; index < number + num ; index++)
+            	    {
+ 			       size = rand() % MALLOC_MAX_SIZE;
+ 	        	*(pointer + index) = memory_alloc(size);
+            		printf("%d\t%p\n",size,*(pointer +index));
+	    	    }
+                    printf("\nTotal memory_alloc calls :%d\n",num);
+                    number = number + num;
+		break;
+		case 2:
+            	    system("clear");
+	            printf("How many memory_calloc calls u want :");
+	    	    scanf("%d",&num);
+            	    printf("Size\tElements\tAdress\n-----------------------------------\n");
+	    	    for(index = number ; index < number+num ;index++)
+	    	    {
+	        	size = rand() % CALLOC_MAX_SIZE;
+	    		totalElements = rand() % CALLOC_MAX_ELEMENTS ;
+ 	    		*(pointer + index) = memory_calloc(totalElements , size);
+            		printf("%d\t%d\t\t%p\n",size,totalElements,*(pointer + index));
+            	    }
+                    printf("\nTotal memory_calloc calls :%d\n",num);
+                    number = number + num;
+		break;
+                default:
+		    system("clear");
+		    printf("\nWrong Choice !!!");
+                break;
+	    }	
+	break;
+
+  	case 2:
+	    system("clear");
+            do
+            {
+	        printf("Out of %d allocated memories how many you want to free :",number);
+ 		scanf("%d",&numFree);
+	    }while(numFree > number || numFree <= 0);
+	    printf("Number\tAddress\n-----------------\n");
+	    for(index = number-1 ; index >= (number - numFree) ;index--)
+	    {
+		printf("%d\t%p\n",index,*(pointer +index));
+                if(NULL != *(pointer +index))
+	            memory_free(*(pointer +index));
+	    }
+            printf("\nTotal memory_free calls :%d\n",numFree);
+	    number=number-numFree;
+	break;
+
+	case 3:
+	    system("clear");
+	    do
+            {
+	        printf("Out of %d allocated memories how many you want to reallocate :",number);
+ 		scanf("%d",&numRealloc);
+	    }while(numRealloc > number || numRealloc <= 0);
+            printf("Previous_Address\tNew_SIZE\tNew_Adress\n----------------------------------------------------\n");
+            for(index = number-1 ; index >= (number - numRealloc) ;index--)
+            {
+                size=rand() % REALLOC_MAX_SIZE;
+		previousAddress = *(pointer + index);
+ 	        *(pointer + index)=memory_realloc(*(pointer + index),size);
+            	printf("%p\t\t%d\t\t%p\n",previousAddress,size,*(pointer + index));
+            }
+            printf("\nTotal memory_realloc calls :%d\n",numRealloc);
+	break;
+	case 4:
+            system("clear");
+	    memory_information();
+	break;
+	case 5:
+            system("clear");
+	    for(index = 0 ; index < number ; index++)
+    	    {
+                if(NULL != *(pointer +index))
+ 		    memory_free(*(pointer + index));
+    	    }
+            number = 0;
+        break;
+	case 6:
+            system("clear");
+	    display_list();
+        break;
+        default:
+            system("clear");
+	    printf("\nWrong Choice !!!!!!");
+ 	break;
+    }
+    printf("\nPress y to continue :");
+    scanf(" %c",&choice);
+    }while(choice == 'y' || choice == 'Y');
+    return 0;
+}
+/*******************************************************************************
+ REVISION HISTORY:
+ 
+  Rev 1.1   SEP 28 2015 2:17:59  A.N.V.S PRATHYUSHA
+  
+ ******************************************************************************/
+

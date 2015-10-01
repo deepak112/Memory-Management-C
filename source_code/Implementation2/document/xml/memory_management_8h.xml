@@ -1,0 +1,1560 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="memory_management_8h" kind="file" language="C++">
+    <compoundname>memoryManagement.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="memory_management_8c" local="yes">src/memoryManagement.c</includedby>
+    <includedby refid="user_8c" local="yes">src/user.c</includedby>
+    <incdepgraph>
+      <node id="23">
+        <label>lib/memoryManagement.h</label>
+        <link refid="memoryManagement.h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stdlib.h</label>
+      </node>
+      <node id="26">
+        <label>string.h</label>
+      </node>
+      <node id="27">
+        <label>time.h</label>
+      </node>
+      <node id="24">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="28">
+        <label>lib/memoryManagement.h</label>
+        <link refid="memoryManagement.h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>src/memoryManagement.c</label>
+        <link refid="memory_management_8c"/>
+      </node>
+      <node id="30">
+        <label>src/user.c</label>
+        <link refid="user_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="memory_management_8h_1a3018c7600b7bb9866400596a56a57af7" prot="public" static="no">
+        <name>START</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="75" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a70ed59adcb4159ac551058053e649640" prot="public" static="no">
+        <name>SIZE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="76" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aee573b883518260a48d5e5859eb67700" prot="public" static="no">
+        <name>SIZE8</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="80" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a0feb4c9d3655c1f4cc571c001ffbf98d" prot="public" static="no">
+        <name>SIZE16</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="81" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ae8fb92f2869c13efccdf7932b67311d2" prot="public" static="no">
+        <name>SIZE32</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="82" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ae9c1e737f774b22d3ef5dc32e7c74639" prot="public" static="no">
+        <name>SIZE64</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="83" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ac769905d29a0721a496c954d5a521a88" prot="public" static="no">
+        <name>SIZE128</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="84" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ad7a598f0d1b7049e2ef4f137b30d90df" prot="public" static="no">
+        <name>SIZE256</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="85" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a11a83fb1f003909dc61b3347346d2f0f" prot="public" static="no">
+        <name>SIZE512</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="86" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1afc256d6d9b1c3d78c147ab6ccacc7e8a" prot="public" static="no">
+        <name>SIZE1024</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="87" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ae9104ca82f0735111c65ef2943c99966" prot="public" static="no">
+        <name>SIZE2048</name>
+        <initializer>2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="88" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a1edd1ea8bddaf4d9c5eb3eae1ee1726a" prot="public" static="no">
+        <name>ALL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="89" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ab5f38975b627b9ff14858507f9125d53" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE8</name>
+        <initializer>2048*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="90" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a20784e34124fcd1de656baedbd84d808" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE16</name>
+        <initializer>2048*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="91" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a3e6f328c286118e34903b813a2e4fa4b" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE32</name>
+        <initializer>1024*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="92" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1abfb779142eb3289eedbcca95b59889a2" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE64</name>
+        <initializer>1024*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="93" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ab6862e75aa51407183d9e6153e6f863a" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE128</name>
+        <initializer>512*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="94" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ae3e1e4f059d7d5dd03379040271159ba" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE256</name>
+        <initializer>512*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="95" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a7abb5a0710b1005554e17339ce295da9" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE512</name>
+        <initializer>256*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="96" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a1d6b157c42ee6e79938e671615b85f23" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE1024</name>
+        <initializer>256*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="97" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a60316eadf39d6b115d483b4129babc07" prot="public" static="no">
+        <name>TOTAL_BLOCKS_OF_SIZE_SIZE2048</name>
+        <initializer>128*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="98" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a5559d5e7ba501e9762af5f203035df14" prot="public" static="no">
+        <name>TOTAL_BLOCKS</name>
+        <initializer><ref refid="memory_management_8h_1ab5f38975b627b9ff14858507f9125d53" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE8</ref>+<ref refid="memory_management_8h_1a20784e34124fcd1de656baedbd84d808" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE16</ref>+<ref refid="memory_management_8h_1a3e6f328c286118e34903b813a2e4fa4b" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE32</ref>+<ref refid="memory_management_8h_1abfb779142eb3289eedbcca95b59889a2" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE64</ref>+<ref refid="memory_management_8h_1ab6862e75aa51407183d9e6153e6f863a" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE128</ref>+<ref refid="memory_management_8h_1ae3e1e4f059d7d5dd03379040271159ba" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE256</ref>+<ref refid="memory_management_8h_1a7abb5a0710b1005554e17339ce295da9" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE512</ref>+<ref refid="memory_management_8h_1a1d6b157c42ee6e79938e671615b85f23" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE1024</ref>+<ref refid="memory_management_8h_1a60316eadf39d6b115d483b4129babc07" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE2048</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="99" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a4f417489d9c3c243405dffcd9e29c218" prot="public" static="no">
+        <name>TOTAL_BYTES</name>
+        <initializer><ref refid="memory_management_8h_1a5559d5e7ba501e9762af5f203035df14" kindref="member">TOTAL_BLOCKS</ref>/8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="100" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a723777312fb96443b4370db291eee783" prot="public" static="no">
+        <name>BIT_AREA_MIN</name>
+        <initializer><ref refid="memory_management_8h_1a3018c7600b7bb9866400596a56a57af7" kindref="member">START</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="101" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" prot="public" static="no">
+        <name>START_LENGTH_SIZE8</name>
+        <initializer><ref refid="memory_management_8h_1a723777312fb96443b4370db291eee783" kindref="member">BIT_AREA_MIN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="102" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a6af6fefe4b22528911f2ce074fb975a4" prot="public" static="no">
+        <name>END_LENGTH_SIZE8</name>
+        <initializer><ref refid="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" kindref="member">START_LENGTH_SIZE8</ref>+<ref refid="memory_management_8h_1ab5f38975b627b9ff14858507f9125d53" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE8</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="103" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" prot="public" static="no">
+        <name>START_LENGTH_SIZE16</name>
+        <initializer><ref refid="memory_management_8h_1a6af6fefe4b22528911f2ce074fb975a4" kindref="member">END_LENGTH_SIZE8</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="104" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a3b353c267661a15d55f52511dceff059" prot="public" static="no">
+        <name>END_LENGTH_SIZE16</name>
+        <initializer><ref refid="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" kindref="member">START_LENGTH_SIZE16</ref>+<ref refid="memory_management_8h_1a20784e34124fcd1de656baedbd84d808" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE16</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="105" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" prot="public" static="no">
+        <name>START_LENGTH_SIZE32</name>
+        <initializer><ref refid="memory_management_8h_1a3b353c267661a15d55f52511dceff059" kindref="member">END_LENGTH_SIZE16</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="106" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a5f9a300d4d1fb14f439a2e162cd4158e" prot="public" static="no">
+        <name>END_LENGTH_SIZE32</name>
+        <initializer><ref refid="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" kindref="member">START_LENGTH_SIZE32</ref>+<ref refid="memory_management_8h_1a3e6f328c286118e34903b813a2e4fa4b" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE32</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="107" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" prot="public" static="no">
+        <name>START_LENGTH_SIZE64</name>
+        <initializer><ref refid="memory_management_8h_1a5f9a300d4d1fb14f439a2e162cd4158e" kindref="member">END_LENGTH_SIZE32</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="108" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aaf1f709910644fb6fb9d661a0fae62b3" prot="public" static="no">
+        <name>END_LENGTH_SIZE64</name>
+        <initializer><ref refid="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" kindref="member">START_LENGTH_SIZE64</ref>+<ref refid="memory_management_8h_1abfb779142eb3289eedbcca95b59889a2" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE64</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="109" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" prot="public" static="no">
+        <name>START_LENGTH_SIZE128</name>
+        <initializer><ref refid="memory_management_8h_1aaf1f709910644fb6fb9d661a0fae62b3" kindref="member">END_LENGTH_SIZE64</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="110" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a77a1a07cb6579370e1099f1dfa289f7e" prot="public" static="no">
+        <name>END_LENGTH_SIZE128</name>
+        <initializer><ref refid="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" kindref="member">START_LENGTH_SIZE128</ref>+<ref refid="memory_management_8h_1ab6862e75aa51407183d9e6153e6f863a" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE128</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="111" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" prot="public" static="no">
+        <name>START_LENGTH_SIZE256</name>
+        <initializer><ref refid="memory_management_8h_1a77a1a07cb6579370e1099f1dfa289f7e" kindref="member">END_LENGTH_SIZE128</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="112" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aefbb31124611a832256505b7d2a5a7aa" prot="public" static="no">
+        <name>END_LENGTH_SIZE256</name>
+        <initializer><ref refid="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" kindref="member">START_LENGTH_SIZE256</ref>+<ref refid="memory_management_8h_1ae3e1e4f059d7d5dd03379040271159ba" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE256</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="113" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" prot="public" static="no">
+        <name>START_LENGTH_SIZE512</name>
+        <initializer><ref refid="memory_management_8h_1aefbb31124611a832256505b7d2a5a7aa" kindref="member">END_LENGTH_SIZE256</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="114" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a49d1beaf8d6485612e2feb9502a86c6a" prot="public" static="no">
+        <name>END_LENGTH_SIZE512</name>
+        <initializer><ref refid="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" kindref="member">START_LENGTH_SIZE512</ref>+<ref refid="memory_management_8h_1a7abb5a0710b1005554e17339ce295da9" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE512</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="115" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" prot="public" static="no">
+        <name>START_LENGTH_SIZE1024</name>
+        <initializer><ref refid="memory_management_8h_1a49d1beaf8d6485612e2feb9502a86c6a" kindref="member">END_LENGTH_SIZE512</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="116" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a734ff1bf94e71b8c9146b544f4600269" prot="public" static="no">
+        <name>END_LENGTH_SIZE1024</name>
+        <initializer><ref refid="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" kindref="member">START_LENGTH_SIZE1024</ref>+<ref refid="memory_management_8h_1a1d6b157c42ee6e79938e671615b85f23" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE1024</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="117" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" prot="public" static="no">
+        <name>START_LENGTH_SIZE2048</name>
+        <initializer><ref refid="memory_management_8h_1a734ff1bf94e71b8c9146b544f4600269" kindref="member">END_LENGTH_SIZE1024</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="118" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ab27dfaffd34f4f946ed6c1201b0ecde6" prot="public" static="no">
+        <name>END_LENGTH_SIZE2048</name>
+        <initializer><ref refid="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" kindref="member">START_LENGTH_SIZE2048</ref>+<ref refid="memory_management_8h_1a60316eadf39d6b115d483b4129babc07" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE2048</ref>/8-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="119" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ae6e8c160e33920d62b1614403be7857d" prot="public" static="no">
+        <name>BIT_AREA_MAX</name>
+        <initializer><ref refid="memory_management_8h_1a4f417489d9c3c243405dffcd9e29c218" kindref="member">TOTAL_BYTES</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="120" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a6882776ff546dc78d6eb192782c04726" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE8</name>
+        <initializer><ref refid="memory_management_8h_1ae6e8c160e33920d62b1614403be7857d" kindref="member">BIT_AREA_MAX</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="121" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a5a31221b432ad5a360476010f3d786fe" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE8</name>
+        <initializer><ref refid="memory_management_8h_1a6882776ff546dc78d6eb192782c04726" kindref="member">INITIAL_LENGTH_SIZE8</ref>+<ref refid="memory_management_8h_1aee573b883518260a48d5e5859eb67700" kindref="member">SIZE8</ref>*<ref refid="memory_management_8h_1ab5f38975b627b9ff14858507f9125d53" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE8</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="122" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aa54fe86781c9274a8b4826ddcf149ce4" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE16</name>
+        <initializer><ref refid="memory_management_8h_1a5a31221b432ad5a360476010f3d786fe" kindref="member">MAX_LENGTH_SIZE8</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="123" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aec5f54b4ff5ea97b1bb298318f9bef2b" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE16</name>
+        <initializer><ref refid="memory_management_8h_1aa54fe86781c9274a8b4826ddcf149ce4" kindref="member">INITIAL_LENGTH_SIZE16</ref>+<ref refid="memory_management_8h_1a0feb4c9d3655c1f4cc571c001ffbf98d" kindref="member">SIZE16</ref>*<ref refid="memory_management_8h_1a20784e34124fcd1de656baedbd84d808" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE16</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="124" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ac7eb7c350e8e057898c62a31083863dd" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE32</name>
+        <initializer><ref refid="memory_management_8h_1aec5f54b4ff5ea97b1bb298318f9bef2b" kindref="member">MAX_LENGTH_SIZE16</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="125" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ac309e3185598c14710f7e86e9a8d7eac" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE32</name>
+        <initializer><ref refid="memory_management_8h_1ac7eb7c350e8e057898c62a31083863dd" kindref="member">INITIAL_LENGTH_SIZE32</ref>+<ref refid="memory_management_8h_1ae8fb92f2869c13efccdf7932b67311d2" kindref="member">SIZE32</ref>*<ref refid="memory_management_8h_1a3e6f328c286118e34903b813a2e4fa4b" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE32</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="126" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a56fa454329b11df943953c4f665e1e7b" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE64</name>
+        <initializer><ref refid="memory_management_8h_1ac309e3185598c14710f7e86e9a8d7eac" kindref="member">MAX_LENGTH_SIZE32</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="127" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a994f4c90c9aa7d6901408d390a58a461" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE64</name>
+        <initializer><ref refid="memory_management_8h_1a56fa454329b11df943953c4f665e1e7b" kindref="member">INITIAL_LENGTH_SIZE64</ref>+<ref refid="memory_management_8h_1ae9c1e737f774b22d3ef5dc32e7c74639" kindref="member">SIZE64</ref>*<ref refid="memory_management_8h_1abfb779142eb3289eedbcca95b59889a2" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE64</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="128" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aca91788276caef0abea30327b94a91a3" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE128</name>
+        <initializer><ref refid="memory_management_8h_1a994f4c90c9aa7d6901408d390a58a461" kindref="member">MAX_LENGTH_SIZE64</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="129" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a1495561797b4fc61bbbb796b5cfea87c" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE128</name>
+        <initializer><ref refid="memory_management_8h_1aca91788276caef0abea30327b94a91a3" kindref="member">INITIAL_LENGTH_SIZE128</ref>+<ref refid="memory_management_8h_1ac769905d29a0721a496c954d5a521a88" kindref="member">SIZE128</ref>*<ref refid="memory_management_8h_1ab6862e75aa51407183d9e6153e6f863a" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE128</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="130" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a90688b443518c2111772b264985c78b7" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE256</name>
+        <initializer><ref refid="memory_management_8h_1a1495561797b4fc61bbbb796b5cfea87c" kindref="member">MAX_LENGTH_SIZE128</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="131" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a6af89ae77a299e48140b132936410d92" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE256</name>
+        <initializer><ref refid="memory_management_8h_1a90688b443518c2111772b264985c78b7" kindref="member">INITIAL_LENGTH_SIZE256</ref>+<ref refid="memory_management_8h_1ad7a598f0d1b7049e2ef4f137b30d90df" kindref="member">SIZE256</ref>*<ref refid="memory_management_8h_1ae3e1e4f059d7d5dd03379040271159ba" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE256</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="132" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a7ee9ee9208e5d413960d0197756b86f1" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE512</name>
+        <initializer><ref refid="memory_management_8h_1a6af89ae77a299e48140b132936410d92" kindref="member">MAX_LENGTH_SIZE256</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="133" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a584ba52d3a0818ea3c54119df40d1b56" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE512</name>
+        <initializer><ref refid="memory_management_8h_1a7ee9ee9208e5d413960d0197756b86f1" kindref="member">INITIAL_LENGTH_SIZE512</ref>+<ref refid="memory_management_8h_1a11a83fb1f003909dc61b3347346d2f0f" kindref="member">SIZE512</ref>*<ref refid="memory_management_8h_1a7abb5a0710b1005554e17339ce295da9" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE512</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="134" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="134" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a6a01fe111aff09aaf870f1f5eb7188f4" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE1024</name>
+        <initializer><ref refid="memory_management_8h_1a584ba52d3a0818ea3c54119df40d1b56" kindref="member">MAX_LENGTH_SIZE512</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="135" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a31a9021f5d3473e2c0f34758cce8c1c4" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE1024</name>
+        <initializer><ref refid="memory_management_8h_1a6a01fe111aff09aaf870f1f5eb7188f4" kindref="member">INITIAL_LENGTH_SIZE1024</ref>+<ref refid="memory_management_8h_1afc256d6d9b1c3d78c147ab6ccacc7e8a" kindref="member">SIZE1024</ref>*<ref refid="memory_management_8h_1a1d6b157c42ee6e79938e671615b85f23" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE1024</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="136" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1aa9fb14eb11923e5cef3b2f09f4b9a30f" prot="public" static="no">
+        <name>INITIAL_LENGTH_SIZE2048</name>
+        <initializer><ref refid="memory_management_8h_1a31a9021f5d3473e2c0f34758cce8c1c4" kindref="member">MAX_LENGTH_SIZE1024</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="137" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="137" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1ad1a88036d0e1dbeb28757b82db95603f" prot="public" static="no">
+        <name>MAX_LENGTH_SIZE2048</name>
+        <initializer><ref refid="memory_management_8h_1aa9fb14eb11923e5cef3b2f09f4b9a30f" kindref="member">INITIAL_LENGTH_SIZE2048</ref>+<ref refid="memory_management_8h_1ae9104ca82f0735111c65ef2943c99966" kindref="member">SIZE2048</ref>*<ref refid="memory_management_8h_1a60316eadf39d6b115d483b4129babc07" kindref="member">TOTAL_BLOCKS_OF_SIZE_SIZE2048</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="138" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+        <referencedby refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a3e3ef8f36911534b592dfb0bcfac2aab" prot="public" static="no">
+        <name>INITIAL_LENGTH_REMAINING</name>
+        <initializer><ref refid="memory_management_8h_1ad1a88036d0e1dbeb28757b82db95603f" kindref="member">MAX_LENGTH_SIZE2048</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="139" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_management_8h_1a7a9a231e30b47bc0345749c8bd1e5077" prot="public" static="no">
+        <name>MAX_LENGTH</name>
+        <initializer>1024*2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="140" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" prot="public" static="no">
+        <name>status</name>
+        <enumvalue id="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" prot="public">
+          <name>TRUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a" prot="public">
+          <name>FALSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="147" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="146" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="memory_management_8h_1ad5d5444b8e84038cb42163f36608d48d" prot="public" static="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char totalMemoryArea[1024 *1024 *SIZE]</definition>
+        <argsstring>[1024 *1024 *SIZE]</argsstring>
+        <name>totalMemoryArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="156" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* check_for_space</definition>
+        <argsstring>(int size)</argsstring>
+        <name>check_for_space</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="161" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="110" bodyend="203"/>
+        <references refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a" compoundref="memory_management_8h" startline="149">FALSE</references>
+        <references refid="memory_management_8h_1aee573b883518260a48d5e5859eb67700" compoundref="memory_management_8h" startline="80">SIZE8</references>
+        <references refid="memory_management_8c_1aaa1cfd5c78cb649d31cdcf5056523f9c" compoundref="memory_management_8c" startline="60" endline="97">perform_alloc</references>
+        <references refid="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" compoundref="memory_management_8h" startline="102">START_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a6af6fefe4b22528911f2ce074fb975a4" compoundref="memory_management_8h" startline="103">END_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a6882776ff546dc78d6eb192782c04726" compoundref="memory_management_8h" startline="121">INITIAL_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" compoundref="memory_management_8h" startline="148">TRUE</references>
+        <references refid="memory_management_8h_1a0feb4c9d3655c1f4cc571c001ffbf98d" compoundref="memory_management_8h" startline="81">SIZE16</references>
+        <references refid="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" compoundref="memory_management_8h" startline="104">START_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a3b353c267661a15d55f52511dceff059" compoundref="memory_management_8h" startline="105">END_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1aa54fe86781c9274a8b4826ddcf149ce4" compoundref="memory_management_8h" startline="123">INITIAL_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1ae8fb92f2869c13efccdf7932b67311d2" compoundref="memory_management_8h" startline="82">SIZE32</references>
+        <references refid="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" compoundref="memory_management_8h" startline="106">START_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1a5f9a300d4d1fb14f439a2e162cd4158e" compoundref="memory_management_8h" startline="107">END_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ac7eb7c350e8e057898c62a31083863dd" compoundref="memory_management_8h" startline="125">INITIAL_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ae9c1e737f774b22d3ef5dc32e7c74639" compoundref="memory_management_8h" startline="83">SIZE64</references>
+        <references refid="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" compoundref="memory_management_8h" startline="108">START_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1aaf1f709910644fb6fb9d661a0fae62b3" compoundref="memory_management_8h" startline="109">END_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1a56fa454329b11df943953c4f665e1e7b" compoundref="memory_management_8h" startline="127">INITIAL_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1ac769905d29a0721a496c954d5a521a88" compoundref="memory_management_8h" startline="84">SIZE128</references>
+        <references refid="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" compoundref="memory_management_8h" startline="110">START_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1a77a1a07cb6579370e1099f1dfa289f7e" compoundref="memory_management_8h" startline="111">END_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1aca91788276caef0abea30327b94a91a3" compoundref="memory_management_8h" startline="129">INITIAL_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1ad7a598f0d1b7049e2ef4f137b30d90df" compoundref="memory_management_8h" startline="85">SIZE256</references>
+        <references refid="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" compoundref="memory_management_8h" startline="112">START_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1aefbb31124611a832256505b7d2a5a7aa" compoundref="memory_management_8h" startline="113">END_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1a90688b443518c2111772b264985c78b7" compoundref="memory_management_8h" startline="131">INITIAL_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1a11a83fb1f003909dc61b3347346d2f0f" compoundref="memory_management_8h" startline="86">SIZE512</references>
+        <references refid="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" compoundref="memory_management_8h" startline="114">START_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a49d1beaf8d6485612e2feb9502a86c6a" compoundref="memory_management_8h" startline="115">END_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a7ee9ee9208e5d413960d0197756b86f1" compoundref="memory_management_8h" startline="133">INITIAL_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1afc256d6d9b1c3d78c147ab6ccacc7e8a" compoundref="memory_management_8h" startline="87">SIZE1024</references>
+        <references refid="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" compoundref="memory_management_8h" startline="116">START_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a734ff1bf94e71b8c9146b544f4600269" compoundref="memory_management_8h" startline="117">END_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a6a01fe111aff09aaf870f1f5eb7188f4" compoundref="memory_management_8h" startline="135">INITIAL_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1ae9104ca82f0735111c65ef2943c99966" compoundref="memory_management_8h" startline="88">SIZE2048</references>
+        <references refid="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" compoundref="memory_management_8h" startline="118">START_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ab27dfaffd34f4f946ed6c1201b0ecde6" compoundref="memory_management_8h" startline="119">END_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1aa9fb14eb11923e5cef3b2f09f4b9a30f" compoundref="memory_management_8h" startline="137">INITIAL_LENGTH_SIZE2048</references>
+        <referencedby refid="memory_management_8h_1ae30a35d507593a3635856b601305dd38" compoundref="memory_management_8c" startline="219" endline="229">memory_alloc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1ae30a35d507593a3635856b601305dd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* memory_alloc</definition>
+        <argsstring>(int size)</argsstring>
+        <name>memory_alloc</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="162" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="219" bodyend="229"/>
+        <references refid="memory_management_8c_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</references>
+        <referencedby refid="memory_management_8h_1a9fddae3713297adcee22fae422fe4383" compoundref="memory_management_8c" startline="332" endline="342">memory_calloc</referencedby>
+        <referencedby refid="memory_management_8h_1aeae46c0f1bc40e0e3b469f40feefd8d0" compoundref="memory_management_8c" startline="358" endline="379">memory_realloc</referencedby>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a9fddae3713297adcee22fae422fe4383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* memory_calloc</definition>
+        <argsstring>(int nelem, int elsize)</argsstring>
+        <name>memory_calloc</name>
+        <param>
+          <type>int</type>
+          <declname>nelem</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>elsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="163" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="332" bodyend="342"/>
+        <references refid="memory_management_8c_1ae30a35d507593a3635856b601305dd38" compoundref="memory_management_8c" startline="219" endline="229">memory_alloc</references>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1aeae46c0f1bc40e0e3b469f40feefd8d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* memory_realloc</definition>
+        <argsstring>(void *ptr, int size)</argsstring>
+        <name>memory_realloc</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="164" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="358" bodyend="379"/>
+        <references refid="memory_management_8c_1ae30a35d507593a3635856b601305dd38" compoundref="memory_management_8c" startline="219" endline="229">memory_alloc</references>
+        <references refid="memory_management_8c_1a3e2309af44a44009e20dea96b76a5f06" compoundref="memory_management_8c" startline="392" endline="438">memory_size</references>
+        <references refid="memory_management_8c_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</references>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int memory_size</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>memory_size</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="165" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="392" bodyend="438"/>
+        <references refid="memory_management_8h_1a6882776ff546dc78d6eb192782c04726" compoundref="memory_management_8h" startline="121">INITIAL_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a5a31221b432ad5a360476010f3d786fe" compoundref="memory_management_8h" startline="122">MAX_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1aee573b883518260a48d5e5859eb67700" compoundref="memory_management_8h" startline="80">SIZE8</references>
+        <references refid="memory_management_8h_1aa54fe86781c9274a8b4826ddcf149ce4" compoundref="memory_management_8h" startline="123">INITIAL_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1aec5f54b4ff5ea97b1bb298318f9bef2b" compoundref="memory_management_8h" startline="124">MAX_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a0feb4c9d3655c1f4cc571c001ffbf98d" compoundref="memory_management_8h" startline="81">SIZE16</references>
+        <references refid="memory_management_8h_1ac7eb7c350e8e057898c62a31083863dd" compoundref="memory_management_8h" startline="125">INITIAL_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ac309e3185598c14710f7e86e9a8d7eac" compoundref="memory_management_8h" startline="126">MAX_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ae8fb92f2869c13efccdf7932b67311d2" compoundref="memory_management_8h" startline="82">SIZE32</references>
+        <references refid="memory_management_8h_1a56fa454329b11df943953c4f665e1e7b" compoundref="memory_management_8h" startline="127">INITIAL_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1a994f4c90c9aa7d6901408d390a58a461" compoundref="memory_management_8h" startline="128">MAX_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1ae9c1e737f774b22d3ef5dc32e7c74639" compoundref="memory_management_8h" startline="83">SIZE64</references>
+        <references refid="memory_management_8h_1aca91788276caef0abea30327b94a91a3" compoundref="memory_management_8h" startline="129">INITIAL_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1a1495561797b4fc61bbbb796b5cfea87c" compoundref="memory_management_8h" startline="130">MAX_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1ac769905d29a0721a496c954d5a521a88" compoundref="memory_management_8h" startline="84">SIZE128</references>
+        <references refid="memory_management_8h_1a90688b443518c2111772b264985c78b7" compoundref="memory_management_8h" startline="131">INITIAL_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1a6af89ae77a299e48140b132936410d92" compoundref="memory_management_8h" startline="132">MAX_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1ad7a598f0d1b7049e2ef4f137b30d90df" compoundref="memory_management_8h" startline="85">SIZE256</references>
+        <references refid="memory_management_8h_1a7ee9ee9208e5d413960d0197756b86f1" compoundref="memory_management_8h" startline="133">INITIAL_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a584ba52d3a0818ea3c54119df40d1b56" compoundref="memory_management_8h" startline="134">MAX_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a11a83fb1f003909dc61b3347346d2f0f" compoundref="memory_management_8h" startline="86">SIZE512</references>
+        <references refid="memory_management_8h_1a6a01fe111aff09aaf870f1f5eb7188f4" compoundref="memory_management_8h" startline="135">INITIAL_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a31a9021f5d3473e2c0f34758cce8c1c4" compoundref="memory_management_8h" startline="136">MAX_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1afc256d6d9b1c3d78c147ab6ccacc7e8a" compoundref="memory_management_8h" startline="87">SIZE1024</references>
+        <references refid="memory_management_8h_1aa9fb14eb11923e5cef3b2f09f4b9a30f" compoundref="memory_management_8h" startline="137">INITIAL_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ad1a88036d0e1dbeb28757b82db95603f" compoundref="memory_management_8h" startline="138">MAX_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ae9104ca82f0735111c65ef2943c99966" compoundref="memory_management_8h" startline="88">SIZE2048</references>
+        <referencedby refid="memory_management_8h_1aeae46c0f1bc40e0e3b469f40feefd8d0" compoundref="memory_management_8c" startline="358" endline="379">memory_realloc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int used_blocks</definition>
+        <argsstring>(int size)</argsstring>
+        <name>used_blocks</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="166" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="482" bodyend="522"/>
+        <references refid="memory_management_8c_1ab62a2cbf81f6577db0668f46aed364ef" compoundref="memory_management_8c" startline="535" endline="552">calculate_blocks</references>
+        <references refid="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" compoundref="memory_management_8h" startline="102">START_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a6af6fefe4b22528911f2ce074fb975a4" compoundref="memory_management_8h" startline="103">END_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" compoundref="memory_management_8h" startline="104">START_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a3b353c267661a15d55f52511dceff059" compoundref="memory_management_8h" startline="105">END_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" compoundref="memory_management_8h" startline="106">START_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1a5f9a300d4d1fb14f439a2e162cd4158e" compoundref="memory_management_8h" startline="107">END_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" compoundref="memory_management_8h" startline="108">START_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1aaf1f709910644fb6fb9d661a0fae62b3" compoundref="memory_management_8h" startline="109">END_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" compoundref="memory_management_8h" startline="110">START_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1a77a1a07cb6579370e1099f1dfa289f7e" compoundref="memory_management_8h" startline="111">END_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" compoundref="memory_management_8h" startline="112">START_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1aefbb31124611a832256505b7d2a5a7aa" compoundref="memory_management_8h" startline="113">END_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" compoundref="memory_management_8h" startline="114">START_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a49d1beaf8d6485612e2feb9502a86c6a" compoundref="memory_management_8h" startline="115">END_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" compoundref="memory_management_8h" startline="116">START_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a734ff1bf94e71b8c9146b544f4600269" compoundref="memory_management_8h" startline="117">END_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" compoundref="memory_management_8h" startline="118">START_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ab27dfaffd34f4f946ed6c1201b0ecde6" compoundref="memory_management_8h" startline="119">END_LENGTH_SIZE2048</references>
+        <referencedby refid="memory_management_8h_1a9961d9a3b8f1cab8d2801a51cac018c1" compoundref="memory_management_8c" startline="453" endline="468">block_information</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int unused_blocks</definition>
+        <argsstring>(int size)</argsstring>
+        <name>unused_blocks</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="167" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="590" bodyend="630"/>
+        <references refid="memory_management_8c_1a156fe06c8c22c3783995e8c2ea0621b9" compoundref="memory_management_8c" startline="643" endline="660">calculate_free_blocks</references>
+        <references refid="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" compoundref="memory_management_8h" startline="102">START_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a6af6fefe4b22528911f2ce074fb975a4" compoundref="memory_management_8h" startline="103">END_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" compoundref="memory_management_8h" startline="104">START_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a3b353c267661a15d55f52511dceff059" compoundref="memory_management_8h" startline="105">END_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" compoundref="memory_management_8h" startline="106">START_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1a5f9a300d4d1fb14f439a2e162cd4158e" compoundref="memory_management_8h" startline="107">END_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" compoundref="memory_management_8h" startline="108">START_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1aaf1f709910644fb6fb9d661a0fae62b3" compoundref="memory_management_8h" startline="109">END_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" compoundref="memory_management_8h" startline="110">START_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1a77a1a07cb6579370e1099f1dfa289f7e" compoundref="memory_management_8h" startline="111">END_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" compoundref="memory_management_8h" startline="112">START_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1aefbb31124611a832256505b7d2a5a7aa" compoundref="memory_management_8h" startline="113">END_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" compoundref="memory_management_8h" startline="114">START_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a49d1beaf8d6485612e2feb9502a86c6a" compoundref="memory_management_8h" startline="115">END_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" compoundref="memory_management_8h" startline="116">START_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a734ff1bf94e71b8c9146b544f4600269" compoundref="memory_management_8h" startline="117">END_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" compoundref="memory_management_8h" startline="118">START_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ab27dfaffd34f4f946ed6c1201b0ecde6" compoundref="memory_management_8h" startline="119">END_LENGTH_SIZE2048</references>
+        <referencedby refid="memory_management_8h_1a9961d9a3b8f1cab8d2801a51cac018c1" compoundref="memory_management_8c" startline="453" endline="468">block_information</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1aaa1cfd5c78cb649d31cdcf5056523f9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int perform_alloc</definition>
+        <argsstring>(int minimum, int maximum, int start, int size)</argsstring>
+        <name>perform_alloc</name>
+        <param>
+          <type>int</type>
+          <declname>minimum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maximum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="168" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="60" bodyend="97"/>
+        <referencedby refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" compoundref="memory_management_8c" startline="110" endline="203">check_for_space</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1ab62a2cbf81f6577db0668f46aed364ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int calculate_blocks</definition>
+        <argsstring>(int minimum, int maximum)</argsstring>
+        <name>calculate_blocks</name>
+        <param>
+          <type>int</type>
+          <declname>minimum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maximum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="169" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="535" bodyend="552"/>
+        <referencedby refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a156fe06c8c22c3783995e8c2ea0621b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int calculate_free_blocks</definition>
+        <argsstring>(int minimum, int maximum)</argsstring>
+        <name>calculate_free_blocks</name>
+        <param>
+          <type>int</type>
+          <declname>minimum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maximum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="170" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="643" bodyend="660"/>
+        <referencedby refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status memory_free</definition>
+        <argsstring>(void *pointer)</argsstring>
+        <name>memory_free</name>
+        <param>
+          <type>void *</type>
+          <declname>pointer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="171" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="242" bodyend="286"/>
+        <references refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a" compoundref="memory_management_8h" startline="149">FALSE</references>
+        <references refid="memory_management_8h_1a6882776ff546dc78d6eb192782c04726" compoundref="memory_management_8h" startline="121">INITIAL_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1a5a31221b432ad5a360476010f3d786fe" compoundref="memory_management_8h" startline="122">MAX_LENGTH_SIZE8</references>
+        <references refid="memory_management_8c_1a163c8fc7314dff46f38171fe7e652ade" compoundref="memory_management_8c" startline="302" endline="315">delete_pointer</references>
+        <references refid="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" compoundref="memory_management_8h" startline="102">START_LENGTH_SIZE8</references>
+        <references refid="memory_management_8h_1aee573b883518260a48d5e5859eb67700" compoundref="memory_management_8h" startline="80">SIZE8</references>
+        <references refid="memory_management_8h_1aa54fe86781c9274a8b4826ddcf149ce4" compoundref="memory_management_8h" startline="123">INITIAL_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1aec5f54b4ff5ea97b1bb298318f9bef2b" compoundref="memory_management_8h" startline="124">MAX_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" compoundref="memory_management_8h" startline="104">START_LENGTH_SIZE16</references>
+        <references refid="memory_management_8h_1a0feb4c9d3655c1f4cc571c001ffbf98d" compoundref="memory_management_8h" startline="81">SIZE16</references>
+        <references refid="memory_management_8h_1ac7eb7c350e8e057898c62a31083863dd" compoundref="memory_management_8h" startline="125">INITIAL_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ac309e3185598c14710f7e86e9a8d7eac" compoundref="memory_management_8h" startline="126">MAX_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" compoundref="memory_management_8h" startline="106">START_LENGTH_SIZE32</references>
+        <references refid="memory_management_8h_1ae8fb92f2869c13efccdf7932b67311d2" compoundref="memory_management_8h" startline="82">SIZE32</references>
+        <references refid="memory_management_8h_1a56fa454329b11df943953c4f665e1e7b" compoundref="memory_management_8h" startline="127">INITIAL_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1a994f4c90c9aa7d6901408d390a58a461" compoundref="memory_management_8h" startline="128">MAX_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" compoundref="memory_management_8h" startline="108">START_LENGTH_SIZE64</references>
+        <references refid="memory_management_8h_1ae9c1e737f774b22d3ef5dc32e7c74639" compoundref="memory_management_8h" startline="83">SIZE64</references>
+        <references refid="memory_management_8h_1aca91788276caef0abea30327b94a91a3" compoundref="memory_management_8h" startline="129">INITIAL_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1a1495561797b4fc61bbbb796b5cfea87c" compoundref="memory_management_8h" startline="130">MAX_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" compoundref="memory_management_8h" startline="110">START_LENGTH_SIZE128</references>
+        <references refid="memory_management_8h_1ac769905d29a0721a496c954d5a521a88" compoundref="memory_management_8h" startline="84">SIZE128</references>
+        <references refid="memory_management_8h_1a90688b443518c2111772b264985c78b7" compoundref="memory_management_8h" startline="131">INITIAL_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1a6af89ae77a299e48140b132936410d92" compoundref="memory_management_8h" startline="132">MAX_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" compoundref="memory_management_8h" startline="112">START_LENGTH_SIZE256</references>
+        <references refid="memory_management_8h_1ad7a598f0d1b7049e2ef4f137b30d90df" compoundref="memory_management_8h" startline="85">SIZE256</references>
+        <references refid="memory_management_8h_1a7ee9ee9208e5d413960d0197756b86f1" compoundref="memory_management_8h" startline="133">INITIAL_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a584ba52d3a0818ea3c54119df40d1b56" compoundref="memory_management_8h" startline="134">MAX_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" compoundref="memory_management_8h" startline="114">START_LENGTH_SIZE512</references>
+        <references refid="memory_management_8h_1a11a83fb1f003909dc61b3347346d2f0f" compoundref="memory_management_8h" startline="86">SIZE512</references>
+        <references refid="memory_management_8h_1a6a01fe111aff09aaf870f1f5eb7188f4" compoundref="memory_management_8h" startline="135">INITIAL_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1a31a9021f5d3473e2c0f34758cce8c1c4" compoundref="memory_management_8h" startline="136">MAX_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" compoundref="memory_management_8h" startline="116">START_LENGTH_SIZE1024</references>
+        <references refid="memory_management_8h_1afc256d6d9b1c3d78c147ab6ccacc7e8a" compoundref="memory_management_8h" startline="87">SIZE1024</references>
+        <references refid="memory_management_8h_1aa9fb14eb11923e5cef3b2f09f4b9a30f" compoundref="memory_management_8h" startline="137">INITIAL_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ad1a88036d0e1dbeb28757b82db95603f" compoundref="memory_management_8h" startline="138">MAX_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" compoundref="memory_management_8h" startline="118">START_LENGTH_SIZE2048</references>
+        <references refid="memory_management_8h_1ae9104ca82f0735111c65ef2943c99966" compoundref="memory_management_8h" startline="88">SIZE2048</references>
+        <referencedby refid="memory_management_8h_1aeae46c0f1bc40e0e3b469f40feefd8d0" compoundref="memory_management_8c" startline="358" endline="379">memory_realloc</referencedby>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a163c8fc7314dff46f38171fe7e652ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status delete_pointer</definition>
+        <argsstring>(int minimum, int start, int size, void *ptr)</argsstring>
+        <name>delete_pointer</name>
+        <param>
+          <type>int</type>
+          <declname>minimum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="172" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="302" bodyend="315"/>
+        <references refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" compoundref="memory_management_8h" startline="148">TRUE</references>
+        <referencedby refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a9961d9a3b8f1cab8d2801a51cac018c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status block_information</definition>
+        <argsstring>(void)</argsstring>
+        <name>block_information</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="173" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/memoryManagement.c" bodystart="453" bodyend="468"/>
+        <references refid="memory_management_8c_1a8758c4e9207b46696939c497d7688b74" compoundref="memory_management_8c" startline="482" endline="522">used_blocks</references>
+        <references refid="memory_management_8c_1a84a886fa82e1e3db2ab9e16c3a3b1434" compoundref="memory_management_8c" startline="590" endline="630">unused_blocks</references>
+        <references refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" compoundref="memory_management_8h" startline="148">TRUE</references>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="memory_management_8h_1a088ff8aff3fbfc997ad69afced4574c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status free_block_information</definition>
+        <argsstring>(void)</argsstring>
+        <name>free_block_information</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h" line="174" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memoryManagement.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright(C)<sp/>2006.MindTree<sp/>Pvt.<sp/>Ltd.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Revision<sp/>:<sp/>V1.0</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Last<sp/>Modified<sp/>Date<sp/><sp/><sp/><sp/>Authors<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>24-SEP-2015<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Prathyusha<sp/>A.N.V.S<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Initial<sp/>version</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Deepak<sp/>Birla</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rohit<sp/>Kumar</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dhyaneswaran<sp/>DG</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>@file<sp/>memoryManagement.h</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>The<sp/>main<sp/>properties<sp/>of<sp/>this<sp/>algorithm<sp/>is:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>The<sp/>total<sp/>memory<sp/>is<sp/>divided<sp/>in<sp/>to<sp/>two<sp/>major<sp/>part<sp/>one<sp/>part<sp/>is<sp/>used<sp/>to<sp/>manage<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/>the<sp/>data<sp/>structure<sp/>and<sp/>other<sp/>part<sp/>is<sp/>used<sp/>for<sp/>operation.A<sp/>very<sp/>less<sp/>memory<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>has<sp/>been<sp/>used<sp/>to<sp/>manage<sp/>the<sp/>data.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>The<sp/>major<sp/>part<sp/>is<sp/>further<sp/>divided<sp/>in<sp/>to<sp/>10<sp/>blocks-</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>Blocks<sp/>of<sp/>8<sp/>byte,16<sp/>byte,32<sp/>byte,64<sp/>byte,128<sp/>byte,256<sp/>byte,512<sp/>byte,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>1024<sp/>byte,2048<sp/>byte<sp/>and<sp/>Last<sp/>block<sp/>is<sp/>of<sp/>not<sp/>specified<sp/>byte<sp/>it<sp/>is<sp/>defined<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>as<sp/>other<sp/>area.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>For<sp/>memory<sp/>&lt;=<sp/>8<sp/>byte<sp/>memory<sp/>is<sp/>allocated<sp/>from<sp/>blocks<sp/>of<sp/>8<sp/>byte.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>For<sp/>memory<sp/>&lt;=<sp/>16<sp/>byte<sp/>memory<sp/>is<sp/>allocated<sp/>from<sp/>blocks<sp/>of<sp/>16<sp/>byte.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/>and<sp/>so<sp/>on,if<sp/>memory<sp/>is<sp/>greater<sp/>than<sp/>2048<sp/>byte<sp/>it<sp/>will<sp/>we<sp/>given<sp/>from<sp/>other<sp/>area.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>SIZE<sp/>can<sp/>be<sp/>changed<sp/>and<sp/>full<sp/>memory<sp/>architecture<sp/>will<sp/>be<sp/>defined<sp/>according<sp/>to<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/>the<sp/>given<sp/>SIZE.The<sp/>percentage<sp/>of<sp/>the<sp/>size<sp/>of<sp/>blocks<sp/>of<sp/>8,16,32...2048<sp/>bytes<sp/>will<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/>be<sp/>same,The<sp/>number<sp/>of<sp/>blocks<sp/>depend<sp/>on<sp/>SIZE.<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>one<sp/>bit<sp/>space<sp/>are<sp/>used<sp/>for<sp/>maintaining<sp/>the<sp/>status<sp/>of<sp/>blocks,to<sp/>show<sp/>whether<sp/>it<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/>is<sp/>filled<sp/>or<sp/>not.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>Less<sp/>than<sp/>1%<sp/>of<sp/>total<sp/>memory<sp/>is<sp/>used<sp/>for<sp/>maintaing<sp/>the<sp/>status.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>Every<sp/>calculation<sp/>are<sp/>done<sp/>using<sp/>MACRO.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>one<sp/>more<sp/>function<sp/>is<sp/>defined<sp/>to<sp/>dispaly<sp/>the<sp/>allocated<sp/>and<sp/>free<sp/>memory.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>Initially<sp/>the<sp/>SIZE<sp/>is<sp/>defined<sp/>as<sp/>1<sp/>MB<sp/>and<sp/>We<sp/>can<sp/>change<sp/>the<sp/>SIZE<sp/>according<sp/>to<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/>users<sp/>need.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*This<sp/>program<sp/>has<sp/>the<sp/>library<sp/>functions<sp/>for<sp/>allocating<sp/>memory,</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deallocating<sp/>memory<sp/>and<sp/>displaying<sp/>the<sp/>size<sp/>of<sp/>free<sp/>memory<sp/>and<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allocated<sp/>memory.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"></highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/>*memory_alloc<sp/>function<sp/>-<sp/>This<sp/>function<sp/>provides<sp/>memory<sp/>dynamically<sp/>to<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>user.<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment"></highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/>*memory_free<sp/>function<sp/>-<sp/>This<sp/>function<sp/>frees<sp/>the<sp/>space<sp/>allocated<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>user<sp/>in<sp/>the<sp/>created<sp/>heap<sp/>space<sp/>under<sp/>user&apos;s<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"></highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/>*memory_calloc<sp/>function<sp/>-<sp/>This<sp/>function<sp/>provides<sp/>memory<sp/>dynamically<sp/>to<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>user<sp/>in<sp/>asked<sp/>number<sp/>of<sp/>blocks<sp/>of<sp/>specified<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>and<sp/>intialise<sp/>them<sp/>to<sp/>zero.</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"></highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/>*memory_realloc<sp/>function<sp/>-<sp/>This<sp/>function<sp/>reallocates<sp/>memory<sp/>to<sp/>the<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>previously<sp/>allocated<sp/>memory<sp/>pointer<sp/>by<sp/>asking<sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>user<sp/>,the<sp/>already<sp/>allocated<sp/>pointer<sp/>and<sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>to<sp/>be<sp/>allocated.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"></highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MEMORYMANAGEMENT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEMORYMANAGEMENT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*<sp/>Include<sp/>files</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/>MACRO<sp/>DEFINITION</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="memory_management_8h_1a3018c7600b7bb9866400596a56a57af7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SIZE<sp/>defines<sp/>the<sp/>total<sp/>memory<sp/>used<sp/>for<sp/>heap<sp/>in<sp/>MB.</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*<sp/>here<sp/>we<sp/>are<sp/>using<sp/>memory<sp/>of<sp/>size<sp/>1<sp/>MB.</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="memory_management_8h_1aee573b883518260a48d5e5859eb67700" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="memory_management_8h_1a0feb4c9d3655c1f4cc571c001ffbf98d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="memory_management_8h_1ae8fb92f2869c13efccdf7932b67311d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="memory_management_8h_1ae9c1e737f774b22d3ef5dc32e7c74639" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="memory_management_8h_1ac769905d29a0721a496c954d5a521a88" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE128<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="memory_management_8h_1ad7a598f0d1b7049e2ef4f137b30d90df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="memory_management_8h_1a11a83fb1f003909dc61b3347346d2f0f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="memory_management_8h_1afc256d6d9b1c3d78c147ab6ccacc7e8a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE1024<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="memory_management_8h_1ae9104ca82f0735111c65ef2943c99966" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIZE2048<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="memory_management_8h_1a1edd1ea8bddaf4d9c5eb3eae1ee1726a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="memory_management_8h_1ab5f38975b627b9ff14858507f9125d53" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2048*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="memory_management_8h_1a20784e34124fcd1de656baedbd84d808" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE16<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2048*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="memory_management_8h_1a3e6f328c286118e34903b813a2e4fa4b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE32<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="memory_management_8h_1abfb779142eb3289eedbcca95b59889a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE64<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="memory_management_8h_1ab6862e75aa51407183d9e6153e6f863a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE128<sp/><sp/><sp/><sp/><sp/><sp/>512*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="memory_management_8h_1ae3e1e4f059d7d5dd03379040271159ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE256<sp/><sp/><sp/><sp/><sp/><sp/>512*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="memory_management_8h_1a7abb5a0710b1005554e17339ce295da9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE512<sp/><sp/><sp/><sp/><sp/><sp/>256*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="memory_management_8h_1a1d6b157c42ee6e79938e671615b85f23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE1024<sp/><sp/><sp/><sp/><sp/>256*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="memory_management_8h_1a60316eadf39d6b115d483b4129babc07" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS_OF_SIZE_SIZE2048<sp/><sp/><sp/><sp/><sp/>128*SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="memory_management_8h_1a5559d5e7ba501e9762af5f203035df14" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BLOCKS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TOTAL_BLOCKS_OF_SIZE_SIZE8+TOTAL_BLOCKS_OF_SIZE_SIZE16+TOTAL_BLOCKS_OF_SIZE_SIZE32+TOTAL_BLOCKS_OF_SIZE_SIZE64+TOTAL_BLOCKS_OF_SIZE_SIZE128+TOTAL_BLOCKS_OF_SIZE_SIZE256+TOTAL_BLOCKS_OF_SIZE_SIZE512+TOTAL_BLOCKS_OF_SIZE_SIZE1024+TOTAL_BLOCKS_OF_SIZE_SIZE2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="memory_management_8h_1a4f417489d9c3c243405dffcd9e29c218" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOTAL_BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TOTAL_BLOCKS/8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="memory_management_8h_1a723777312fb96443b4370db291eee783" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIT_AREA_MIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="memory_management_8h_1a8a5cbd0409f2d6df8561b1bb395a7f46" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BIT_AREA_MIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="memory_management_8h_1a6af6fefe4b22528911f2ce074fb975a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE8+TOTAL_BLOCKS_OF_SIZE_SIZE8/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="memory_management_8h_1a2f29c04238fb0c1f4a7ec6c9bf9f6944" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE8+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="memory_management_8h_1a3b353c267661a15d55f52511dceff059" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE16+TOTAL_BLOCKS_OF_SIZE_SIZE16/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="memory_management_8h_1a29b32c59a32f53431c6f431a1bd019fb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE16+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="memory_management_8h_1a5f9a300d4d1fb14f439a2e162cd4158e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE32+TOTAL_BLOCKS_OF_SIZE_SIZE32/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="memory_management_8h_1ab9da1bb704226b0a20de81f1f5a77267" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE32+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="memory_management_8h_1aaf1f709910644fb6fb9d661a0fae62b3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE64+TOTAL_BLOCKS_OF_SIZE_SIZE64/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="memory_management_8h_1a6b18aa93bd5b19fb60d8d909915a4f5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE128<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE64+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="memory_management_8h_1a77a1a07cb6579370e1099f1dfa289f7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE128<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE128+TOTAL_BLOCKS_OF_SIZE_SIZE128/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="memory_management_8h_1ae4c0b0fa2b86d8d809b6da282ec30a14" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE128+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="memory_management_8h_1aefbb31124611a832256505b7d2a5a7aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE256+TOTAL_BLOCKS_OF_SIZE_SIZE256/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="memory_management_8h_1a543a9998e3811f5715ed9f7d4d3b8ff6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE256+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="memory_management_8h_1a49d1beaf8d6485612e2feb9502a86c6a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE512+TOTAL_BLOCKS_OF_SIZE_SIZE512/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="memory_management_8h_1af813417d82cdcd72cf5d7e4d7a659d06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE1024<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE512+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="memory_management_8h_1a734ff1bf94e71b8c9146b544f4600269" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE1024<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE1024+TOTAL_BLOCKS_OF_SIZE_SIZE1024/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="memory_management_8h_1a0f7aee3abb937b3fa8312010bf97d73c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>START_LENGTH_SIZE2048<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END_LENGTH_SIZE1024+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="memory_management_8h_1ab27dfaffd34f4f946ed6c1201b0ecde6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_LENGTH_SIZE2048<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>START_LENGTH_SIZE2048+TOTAL_BLOCKS_OF_SIZE_SIZE2048/8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="memory_management_8h_1ae6e8c160e33920d62b1614403be7857d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIT_AREA_MAX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TOTAL_BYTES-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="memory_management_8h_1a6882776ff546dc78d6eb192782c04726" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BIT_AREA_MAX+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="memory_management_8h_1a5a31221b432ad5a360476010f3d786fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE8+SIZE8*TOTAL_BLOCKS_OF_SIZE_SIZE8-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="memory_management_8h_1aa54fe86781c9274a8b4826ddcf149ce4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE8+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="memory_management_8h_1aec5f54b4ff5ea97b1bb298318f9bef2b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE16+SIZE16*TOTAL_BLOCKS_OF_SIZE_SIZE16-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="memory_management_8h_1ac7eb7c350e8e057898c62a31083863dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE16+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="memory_management_8h_1ac309e3185598c14710f7e86e9a8d7eac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE32+SIZE32*TOTAL_BLOCKS_OF_SIZE_SIZE32-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="memory_management_8h_1a56fa454329b11df943953c4f665e1e7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE32+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="memory_management_8h_1a994f4c90c9aa7d6901408d390a58a461" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE64+SIZE64*TOTAL_BLOCKS_OF_SIZE_SIZE64-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="memory_management_8h_1aca91788276caef0abea30327b94a91a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE128<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE64+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="memory_management_8h_1a1495561797b4fc61bbbb796b5cfea87c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE128<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE128+SIZE128*TOTAL_BLOCKS_OF_SIZE_SIZE128-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="memory_management_8h_1a90688b443518c2111772b264985c78b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE128+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="memory_management_8h_1a6af89ae77a299e48140b132936410d92" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE256+SIZE256*TOTAL_BLOCKS_OF_SIZE_SIZE256-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="memory_management_8h_1a7ee9ee9208e5d413960d0197756b86f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE256+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="memory_management_8h_1a584ba52d3a0818ea3c54119df40d1b56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE512+SIZE512*TOTAL_BLOCKS_OF_SIZE_SIZE512-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="memory_management_8h_1a6a01fe111aff09aaf870f1f5eb7188f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE1024<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE512+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="memory_management_8h_1a31a9021f5d3473e2c0f34758cce8c1c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE1024<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE1024+SIZE1024*TOTAL_BLOCKS_OF_SIZE_SIZE1024-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="memory_management_8h_1aa9fb14eb11923e5cef3b2f09f4b9a30f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_SIZE2048<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE1024+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="memory_management_8h_1ad1a88036d0e1dbeb28757b82db95603f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH_SIZE2048<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INITIAL_LENGTH_SIZE2048+SIZE2048*TOTAL_BLOCKS_OF_SIZE_SIZE2048-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="memory_management_8h_1a3e3ef8f36911534b592dfb0bcfac2aab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_LENGTH_REMAINING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LENGTH_SIZE2048+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="memory_management_8h_1a7a9a231e30b47bc0345749c8bd1e5077" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024*2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*<sp/>ENUM<sp/>DEFINITION</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148" refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" refkind="member"><highlight class="normal"><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839" kindref="member">TRUE</ref>,</highlight></codeline>
+<codeline lineno="149" refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a" refkind="member"><highlight class="normal"><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a" kindref="member">FALSE</ref></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/>*<sp/>EXTERNAL<sp/>VARIABLE<sp/>DECLARATION</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>totalMemoryArea[1024*1024*<ref refid="memory_management_8h_1a70ed59adcb4159ac551058053e649640" kindref="member">SIZE</ref>];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/>*<sp/>API<sp/>DECLARATION</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="memory_management_8h_1aea43d1dfada1be33a518865f1dfec034" kindref="member">check_for_space</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="memory_management_8h_1ae30a35d507593a3635856b601305dd38" kindref="member">memory_alloc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);<sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="memory_management_8h_1a9fddae3713297adcee22fae422fe4383" kindref="member">memory_calloc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nelem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elsize);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="memory_management_8h_1aeae46c0f1bc40e0e3b469f40feefd8d0" kindref="member">memory_realloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1a3e2309af44a44009e20dea96b76a5f06" kindref="member">memory_size</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1a8758c4e9207b46696939c497d7688b74" kindref="member">used_blocks</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1a84a886fa82e1e3db2ab9e16c3a3b1434" kindref="member">unused_blocks</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1aaa1cfd5c78cb649d31cdcf5056523f9c" kindref="member">perform_alloc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minimum,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximum<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1ab62a2cbf81f6577db0668f46aed364ef" kindref="member">calculate_blocks</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minimum<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximum);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory_management_8h_1a156fe06c8c22c3783995e8c2ea0621b9" kindref="member">calculate_free_blocks</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minimum<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximum);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="memory_management_8h_1a8a12d29f1824bf7225965e8b35a0f3a8" kindref="member">memory_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pointer);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="memory_management_8h_1a163c8fc7314dff46f38171fe7e652ade" kindref="member">delete_pointer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minimum<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="memory_management_8h_1a9961d9a3b8f1cab8d2801a51cac018c1" kindref="member">block_information</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><ref refid="memory_management_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="memory_management_8h_1a088ff8aff3fbfc997ad69afced4574c8" kindref="member">free_block_information</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/>REVISION<sp/>HISTORY:</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/>Rev<sp/>1.1<sp/><sp/><sp/>SEP<sp/>24<sp/>2015<sp/>09:55:00<sp/><sp/><sp/>Rohit<sp/>Kumar</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MEMORY_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/lib/memoryManagement.h"/>
+  </compounddef>
+</doxygen>

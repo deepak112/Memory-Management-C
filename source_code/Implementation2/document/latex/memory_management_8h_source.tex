@@ -1,0 +1,189 @@
+\hypertarget{memory_management_8h_source}{}\subsection{memory\+Management.\+h}
+\label{memory_management_8h_source}\index{lib/memory\+Management.\+h@{lib/memory\+Management.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/*******************************************************************************                           
+                 }
+00002 \textcolor{comment}{ *                        memoryManagement.h}
+00003 \textcolor{comment}{ * Copyright(C) 2006.MindTree Pvt. Ltd. All rights reserved.}
+00004 \textcolor{comment}{ *}
+00005 \textcolor{comment}{ * Revision : V1.0}
+00006 \textcolor{comment}{ *}
+00007 \textcolor{comment}{ * Last Modified Date    Authors                         Description}
+00008 \textcolor{comment}{ *}
+00009 \textcolor{comment}{ * 24-SEP-2015           Prathyusha A.N.V.S              Initial version}
+00010 \textcolor{comment}{ *                       Deepak Birla}
+00011 \textcolor{comment}{ *           Rohit Kumar}
+00012 \textcolor{comment}{ *           Dhyaneswaran DG}
+00013 \textcolor{comment}{ ******************************************************************************/}
+00014 \textcolor{comment}{/*******************************************************************************}
+00015 \textcolor{comment}{ * @file memoryManagement.h}
+00016 \textcolor{comment}{ * The main properties of this algorithm is:}
+00017 \textcolor{comment}{ * The total memory is divided in to two major part one part is used to manage }
+00018 \textcolor{comment}{   the data structure and other part is used for operation.A very less memory }
+00019 \textcolor{comment}{   has been used to manage the data.}
+00020 \textcolor{comment}{   The major part is further divided in to 10 blocks-}
+00021 \textcolor{comment}{   Blocks of 8 byte,16 byte,32 byte,64 byte,128 byte,256 byte,512 byte,}
+00022 \textcolor{comment}{   1024 byte,2048 byte and Last block is of not specified byte it is defined }
+00023 \textcolor{comment}{   as other area.}
+00024 \textcolor{comment}{   For memory <= 8 byte memory is allocated from blocks of 8 byte.}
+00025 \textcolor{comment}{   For memory <= 16 byte memory is allocated from blocks of 16 byte.}
+00026 \textcolor{comment}{   and so on,if memory is greater than 2048 byte it will we given from other area.}
+00027 \textcolor{comment}{ * SIZE can be changed and full memory architecture will be defined according to }
+00028 \textcolor{comment}{   the given SIZE.The percentage of the size of blocks of 8,16,32...2048 bytes will }
+00029 \textcolor{comment}{   be same,The number of blocks depend on SIZE.   }
+00030 \textcolor{comment}{ * one bit space are used for maintaining the status of blocks,to show whether it }
+00031 \textcolor{comment}{   is filled or not.}
+00032 \textcolor{comment}{ * Less than 1% of total memory is used for maintaing the status.}
+00033 \textcolor{comment}{ * Every calculation are done using MACRO.}
+00034 \textcolor{comment}{ * one more function is defined to dispaly the allocated and free memory.}
+00035 \textcolor{comment}{ * Initially the SIZE is defined as 1 MB and We can change the SIZE according to }
+00036 \textcolor{comment}{   users need.}
+00037 \textcolor{comment}{ *This program has the library functions for allocating memory,}
+00038 \textcolor{comment}{           deallocating memory and displaying the size of free memory and }
+00039 \textcolor{comment}{       allocated memory.}
+00040 \textcolor{comment}{}
+00041 \textcolor{comment}{   *memory\_alloc function - This function provides memory dynamically to }
+00042 \textcolor{comment}{                        user.  }
+00043 \textcolor{comment}{}
+00044 \textcolor{comment}{   *memory\_free function - This function frees the space allocated for the}
+00045 \textcolor{comment}{               user in the created heap space under user's }
+00046 \textcolor{comment}{                           request.}
+00047 \textcolor{comment}{}
+00048 \textcolor{comment}{   *memory\_calloc function - This function provides memory dynamically to }
+00049 \textcolor{comment}{                             user in asked number of blocks of specified }
+00050 \textcolor{comment}{                             size and intialise them to zero.}
+00051 \textcolor{comment}{}
+00052 \textcolor{comment}{   *memory\_realloc function - This function reallocates memory to the }
+00053 \textcolor{comment}{                          previously allocated memory pointer by asking  }
+00054 \textcolor{comment}{                              the user ,the already allocated pointer and  }
+00055 \textcolor{comment}{                              size to be allocated.}
+00056 \textcolor{comment}{}
+00057 \textcolor{comment}{ ******************************************************************************/}
+00058 
+00059 \textcolor{preprocessor}{#ifndef MEMORYMANAGEMENT\_H\_}
+00060 \textcolor{preprocessor}{#define MEMORYMANAGEMENT\_H\_}
+00061 
+00062 \textcolor{comment}{/*******************************************************************************}
+00063 \textcolor{comment}{ * Include files}
+00064 \textcolor{comment}{ ******************************************************************************/}
+00065 
+00066 \textcolor{preprocessor}{#include<stdio.h>}
+00067 \textcolor{preprocessor}{#include<stdlib.h>}
+00068 \textcolor{preprocessor}{#include<string.h>}
+00069 \textcolor{preprocessor}{#include<time.h>}
+00070 
+00071 \textcolor{comment}{/*******************************************************************************}
+00072 \textcolor{comment}{ * MACRO DEFINITION}
+00073 \textcolor{comment}{ ******************************************************************************/}
+00074 
+\hypertarget{memory_management_8h_source_l00075}{}\hyperlink{memory_management_8h_a3018c7600b7bb9866400596a56a57af7}{00075} \textcolor{preprocessor}{#define START                             0}
+\hypertarget{memory_management_8h_source_l00076}{}\hyperlink{memory_management_8h_a70ed59adcb4159ac551058053e649640}{00076} \textcolor{preprocessor}{#define SIZE                              1  }
+00077 \textcolor{comment}{/* SIZE defines the total memory used for heap in MB.}
+00078 \textcolor{comment}{ * here we are using memory of size 1 MB.}
+00079 \textcolor{comment}{ */}
+\hypertarget{memory_management_8h_source_l00080}{}\hyperlink{memory_management_8h_aee573b883518260a48d5e5859eb67700}{00080} \textcolor{preprocessor}{#define SIZE8                             8}
+\hypertarget{memory_management_8h_source_l00081}{}\hyperlink{memory_management_8h_a0feb4c9d3655c1f4cc571c001ffbf98d}{00081} \textcolor{preprocessor}{#define SIZE16                            16}
+\hypertarget{memory_management_8h_source_l00082}{}\hyperlink{memory_management_8h_ae8fb92f2869c13efccdf7932b67311d2}{00082} \textcolor{preprocessor}{#define SIZE32                            32}
+\hypertarget{memory_management_8h_source_l00083}{}\hyperlink{memory_management_8h_ae9c1e737f774b22d3ef5dc32e7c74639}{00083} \textcolor{preprocessor}{#define SIZE64                            64}
+\hypertarget{memory_management_8h_source_l00084}{}\hyperlink{memory_management_8h_ac769905d29a0721a496c954d5a521a88}{00084} \textcolor{preprocessor}{#define SIZE128                           128}
+\hypertarget{memory_management_8h_source_l00085}{}\hyperlink{memory_management_8h_ad7a598f0d1b7049e2ef4f137b30d90df}{00085} \textcolor{preprocessor}{#define SIZE256                           256}
+\hypertarget{memory_management_8h_source_l00086}{}\hyperlink{memory_management_8h_a11a83fb1f003909dc61b3347346d2f0f}{00086} \textcolor{preprocessor}{#define SIZE512                           512}
+\hypertarget{memory_management_8h_source_l00087}{}\hyperlink{memory_management_8h_afc256d6d9b1c3d78c147ab6ccacc7e8a}{00087} \textcolor{preprocessor}{#define SIZE1024                          1024}
+\hypertarget{memory_management_8h_source_l00088}{}\hyperlink{memory_management_8h_ae9104ca82f0735111c65ef2943c99966}{00088} \textcolor{preprocessor}{#define SIZE2048                          2048}
+\hypertarget{memory_management_8h_source_l00089}{}\hyperlink{memory_management_8h_a1edd1ea8bddaf4d9c5eb3eae1ee1726a}{00089} \textcolor{preprocessor}{#define ALL                               0}
+\hypertarget{memory_management_8h_source_l00090}{}\hyperlink{memory_management_8h_ab5f38975b627b9ff14858507f9125d53}{00090} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE8        2048*SIZE}
+\hypertarget{memory_management_8h_source_l00091}{}\hyperlink{memory_management_8h_a20784e34124fcd1de656baedbd84d808}{00091} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE16       2048*SIZE}
+\hypertarget{memory_management_8h_source_l00092}{}\hyperlink{memory_management_8h_a3e6f328c286118e34903b813a2e4fa4b}{00092} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE32       1024*SIZE}
+\hypertarget{memory_management_8h_source_l00093}{}\hyperlink{memory_management_8h_abfb779142eb3289eedbcca95b59889a2}{00093} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE64       1024*SIZE}
+\hypertarget{memory_management_8h_source_l00094}{}\hyperlink{memory_management_8h_ab6862e75aa51407183d9e6153e6f863a}{00094} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE128      512*SIZE}
+\hypertarget{memory_management_8h_source_l00095}{}\hyperlink{memory_management_8h_ae3e1e4f059d7d5dd03379040271159ba}{00095} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE256      512*SIZE}
+\hypertarget{memory_management_8h_source_l00096}{}\hyperlink{memory_management_8h_a7abb5a0710b1005554e17339ce295da9}{00096} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE512      256*SIZE}
+\hypertarget{memory_management_8h_source_l00097}{}\hyperlink{memory_management_8h_a1d6b157c42ee6e79938e671615b85f23}{00097} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE1024     256*SIZE}
+\hypertarget{memory_management_8h_source_l00098}{}\hyperlink{memory_management_8h_a60316eadf39d6b115d483b4129babc07}{00098} \textcolor{preprocessor}{#define TOTAL\_BLOCKS\_OF\_SIZE\_SIZE2048     128*SIZE}
+\hypertarget{memory_management_8h_source_l00099}{}\hyperlink{memory_management_8h_a5559d5e7ba501e9762af5f203035df14}{00099} \textcolor{preprocessor}{#define TOTAL\_BLOCKS                     
+       TOTAL\_BLOCKS\_OF\_SIZE\_SIZE8+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE16+TOTAL\_BLOCK
+      S\_OF\_SIZE\_SIZE32+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE64+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE128+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE256+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE512+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE1024+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE2048}
+\hypertarget{memory_management_8h_source_l00100}{}\hyperlink{memory_management_8h_a4f417489d9c3c243405dffcd9e29c218}{00100} \textcolor{preprocessor}{#define TOTAL\_BYTES                       TOTAL\_BLOCKS/8}
+\hypertarget{memory_management_8h_source_l00101}{}\hyperlink{memory_management_8h_a723777312fb96443b4370db291eee783}{00101} \textcolor{preprocessor}{#define BIT\_AREA\_MIN                      START}
+\hypertarget{memory_management_8h_source_l00102}{}\hyperlink{memory_management_8h_a8a5cbd0409f2d6df8561b1bb395a7f46}{00102} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE8                BIT\_AREA\_MIN}
+\hypertarget{memory_management_8h_source_l00103}{}\hyperlink{memory_management_8h_a6af6fefe4b22528911f2ce074fb975a4}{00103} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE8                  START\_LENGTH\_SIZE8+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE8/8-1}
+\hypertarget{memory_management_8h_source_l00104}{}\hyperlink{memory_management_8h_a2f29c04238fb0c1f4a7ec6c9bf9f6944}{00104} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE16               END\_LENGTH\_SIZE8+1}
+\hypertarget{memory_management_8h_source_l00105}{}\hyperlink{memory_management_8h_a3b353c267661a15d55f52511dceff059}{00105} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE16                 START\_LENGTH\_SIZE16+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE16/8-1}
+\hypertarget{memory_management_8h_source_l00106}{}\hyperlink{memory_management_8h_a29b32c59a32f53431c6f431a1bd019fb}{00106} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE32               END\_LENGTH\_SIZE16+1}
+\hypertarget{memory_management_8h_source_l00107}{}\hyperlink{memory_management_8h_a5f9a300d4d1fb14f439a2e162cd4158e}{00107} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE32                 START\_LENGTH\_SIZE32+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE32/8-1}
+\hypertarget{memory_management_8h_source_l00108}{}\hyperlink{memory_management_8h_ab9da1bb704226b0a20de81f1f5a77267}{00108} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE64               END\_LENGTH\_SIZE32+1}
+\hypertarget{memory_management_8h_source_l00109}{}\hyperlink{memory_management_8h_aaf1f709910644fb6fb9d661a0fae62b3}{00109} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE64                 START\_LENGTH\_SIZE64+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE64/8-1}
+\hypertarget{memory_management_8h_source_l00110}{}\hyperlink{memory_management_8h_a6b18aa93bd5b19fb60d8d909915a4f5f}{00110} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE128              END\_LENGTH\_SIZE64+1}
+\hypertarget{memory_management_8h_source_l00111}{}\hyperlink{memory_management_8h_a77a1a07cb6579370e1099f1dfa289f7e}{00111} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE128                START\_LENGTH\_SIZE128+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE128/8-1}
+\hypertarget{memory_management_8h_source_l00112}{}\hyperlink{memory_management_8h_ae4c0b0fa2b86d8d809b6da282ec30a14}{00112} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE256              END\_LENGTH\_SIZE128+1}
+\hypertarget{memory_management_8h_source_l00113}{}\hyperlink{memory_management_8h_aefbb31124611a832256505b7d2a5a7aa}{00113} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE256                START\_LENGTH\_SIZE256+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE256/8-1}
+\hypertarget{memory_management_8h_source_l00114}{}\hyperlink{memory_management_8h_a543a9998e3811f5715ed9f7d4d3b8ff6}{00114} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE512              END\_LENGTH\_SIZE256+1}
+\hypertarget{memory_management_8h_source_l00115}{}\hyperlink{memory_management_8h_a49d1beaf8d6485612e2feb9502a86c6a}{00115} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE512                START\_LENGTH\_SIZE512+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE512/8-1}
+\hypertarget{memory_management_8h_source_l00116}{}\hyperlink{memory_management_8h_af813417d82cdcd72cf5d7e4d7a659d06}{00116} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE1024             END\_LENGTH\_SIZE512+1}
+\hypertarget{memory_management_8h_source_l00117}{}\hyperlink{memory_management_8h_a734ff1bf94e71b8c9146b544f4600269}{00117} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE1024               START\_LENGTH\_SIZE1024+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE1024/8-1}
+\hypertarget{memory_management_8h_source_l00118}{}\hyperlink{memory_management_8h_a0f7aee3abb937b3fa8312010bf97d73c}{00118} \textcolor{preprocessor}{#define START\_LENGTH\_SIZE2048             END\_LENGTH\_SIZE1024+1}
+\hypertarget{memory_management_8h_source_l00119}{}\hyperlink{memory_management_8h_ab27dfaffd34f4f946ed6c1201b0ecde6}{00119} \textcolor{preprocessor}{#define END\_LENGTH\_SIZE2048               START\_LENGTH\_SIZE2048+TOTAL\_BLOCKS\_OF\_SIZE\_SIZE2048/8-1}
+\hypertarget{memory_management_8h_source_l00120}{}\hyperlink{memory_management_8h_ae6e8c160e33920d62b1614403be7857d}{00120} \textcolor{preprocessor}{#define BIT\_AREA\_MAX                      TOTAL\_BYTES-1}
+\hypertarget{memory_management_8h_source_l00121}{}\hyperlink{memory_management_8h_a6882776ff546dc78d6eb192782c04726}{00121} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE8              BIT\_AREA\_MAX+1}
+\hypertarget{memory_management_8h_source_l00122}{}\hyperlink{memory_management_8h_a5a31221b432ad5a360476010f3d786fe}{00122} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE8                  INITIAL\_LENGTH\_SIZE8+SIZE8*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE8-1}
+\hypertarget{memory_management_8h_source_l00123}{}\hyperlink{memory_management_8h_aa54fe86781c9274a8b4826ddcf149ce4}{00123} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE16             MAX\_LENGTH\_SIZE8+1}
+\hypertarget{memory_management_8h_source_l00124}{}\hyperlink{memory_management_8h_aec5f54b4ff5ea97b1bb298318f9bef2b}{00124} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE16                 INITIAL\_LENGTH\_SIZE16+SIZE16*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE16-1}
+\hypertarget{memory_management_8h_source_l00125}{}\hyperlink{memory_management_8h_ac7eb7c350e8e057898c62a31083863dd}{00125} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE32             MAX\_LENGTH\_SIZE16+1}
+\hypertarget{memory_management_8h_source_l00126}{}\hyperlink{memory_management_8h_ac309e3185598c14710f7e86e9a8d7eac}{00126} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE32                 INITIAL\_LENGTH\_SIZE32+SIZE32*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE32-1}
+\hypertarget{memory_management_8h_source_l00127}{}\hyperlink{memory_management_8h_a56fa454329b11df943953c4f665e1e7b}{00127} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE64             MAX\_LENGTH\_SIZE32+1}
+\hypertarget{memory_management_8h_source_l00128}{}\hyperlink{memory_management_8h_a994f4c90c9aa7d6901408d390a58a461}{00128} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE64                 INITIAL\_LENGTH\_SIZE64+SIZE64*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE64-1}
+\hypertarget{memory_management_8h_source_l00129}{}\hyperlink{memory_management_8h_aca91788276caef0abea30327b94a91a3}{00129} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE128            MAX\_LENGTH\_SIZE64+1}
+\hypertarget{memory_management_8h_source_l00130}{}\hyperlink{memory_management_8h_a1495561797b4fc61bbbb796b5cfea87c}{00130} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE128                INITIAL\_LENGTH\_SIZE128+SIZE128*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE128-1}
+\hypertarget{memory_management_8h_source_l00131}{}\hyperlink{memory_management_8h_a90688b443518c2111772b264985c78b7}{00131} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE256            MAX\_LENGTH\_SIZE128+1}
+\hypertarget{memory_management_8h_source_l00132}{}\hyperlink{memory_management_8h_a6af89ae77a299e48140b132936410d92}{00132} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE256                INITIAL\_LENGTH\_SIZE256+SIZE256*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE256-1}
+\hypertarget{memory_management_8h_source_l00133}{}\hyperlink{memory_management_8h_a7ee9ee9208e5d413960d0197756b86f1}{00133} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE512            MAX\_LENGTH\_SIZE256+1}
+\hypertarget{memory_management_8h_source_l00134}{}\hyperlink{memory_management_8h_a584ba52d3a0818ea3c54119df40d1b56}{00134} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE512                INITIAL\_LENGTH\_SIZE512+SIZE512*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE512-1}
+\hypertarget{memory_management_8h_source_l00135}{}\hyperlink{memory_management_8h_a6a01fe111aff09aaf870f1f5eb7188f4}{00135} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE1024           MAX\_LENGTH\_SIZE512+1}
+\hypertarget{memory_management_8h_source_l00136}{}\hyperlink{memory_management_8h_a31a9021f5d3473e2c0f34758cce8c1c4}{00136} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE1024               INITIAL\_LENGTH\_SIZE1024+SIZE1024*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE1024-1}
+\hypertarget{memory_management_8h_source_l00137}{}\hyperlink{memory_management_8h_aa9fb14eb11923e5cef3b2f09f4b9a30f}{00137} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_SIZE2048           MAX\_LENGTH\_SIZE1024+1}
+\hypertarget{memory_management_8h_source_l00138}{}\hyperlink{memory_management_8h_ad1a88036d0e1dbeb28757b82db95603f}{00138} \textcolor{preprocessor}{#define MAX\_LENGTH\_SIZE2048               INITIAL\_LENGTH\_SIZE2048+SIZE2048*TOTAL\_BLOCKS\_OF\_SIZE\_SIZE2048-1}
+\hypertarget{memory_management_8h_source_l00139}{}\hyperlink{memory_management_8h_a3e3ef8f36911534b592dfb0bcfac2aab}{00139} \textcolor{preprocessor}{#define INITIAL\_LENGTH\_REMAINING          MAX\_LENGTH\_SIZE2048+1}
+\hypertarget{memory_management_8h_source_l00140}{}\hyperlink{memory_management_8h_a7a9a231e30b47bc0345749c8bd1e5077}{00140} \textcolor{preprocessor}{#define MAX\_LENGTH                        1024*2048}
+00141 
+00142 \textcolor{comment}{/*******************************************************************************}
+00143 \textcolor{comment}{ * ENUM DEFINITION}
+00144 \textcolor{comment}{ ******************************************************************************/}
+00145 
+\hypertarget{memory_management_8h_source_l00146}{}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{00146} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}
+00147 \{
+\hypertarget{memory_management_8h_source_l00148}{}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839}{00148} \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa82764c3079aea4e60c80e45befbb839}{TRUE},
+\hypertarget{memory_management_8h_source_l00149}{}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a}{00149} \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}
+00150 \}\hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status};
+00151 
+00152 \textcolor{comment}{/*******************************************************************************}
+00153 \textcolor{comment}{ * EXTERNAL VARIABLE DECLARATION}
+00154 \textcolor{comment}{ ******************************************************************************/}
+00155 
+00156 \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} totalMemoryArea[1024*1024*\hyperlink{memory_management_8h_a70ed59adcb4159ac551058053e649640}{SIZE}];
+00157 
+00158 \textcolor{comment}{/*******************************************************************************}
+00159 \textcolor{comment}{ * API DECLARATION}
+00160 \textcolor{comment}{ ******************************************************************************/}
+00161 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_aea43d1dfada1be33a518865f1dfec034}{check\_for\_space}(\textcolor{keywordtype}{int} size);
+00162 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_ae30a35d507593a3635856b601305dd38}{memory\_alloc}(\textcolor{keywordtype}{int} size);  
+00163 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_a9fddae3713297adcee22fae422fe4383}{memory\_calloc}(\textcolor{keywordtype}{int} nelem, \textcolor{keywordtype}{int} elsize);
+00164 \textcolor{keywordtype}{void} *\hyperlink{memory_management_8h_aeae46c0f1bc40e0e3b469f40feefd8d0}{memory\_realloc}(\textcolor{keywordtype}{void} * ptr, \textcolor{keywordtype}{int} size);
+00165 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a3e2309af44a44009e20dea96b76a5f06}{memory\_size}(\textcolor{keywordtype}{void} *ptr);
+00166 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a8758c4e9207b46696939c497d7688b74}{used\_blocks}(\textcolor{keywordtype}{int} size);
+00167 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a84a886fa82e1e3db2ab9e16c3a3b1434}{unused\_blocks}(\textcolor{keywordtype}{int} size);
+00168 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_aaa1cfd5c78cb649d31cdcf5056523f9c}{perform\_alloc}(\textcolor{keywordtype}{int} minimum,\textcolor{keywordtype}{int} maximum , \textcolor{keywordtype}{int} start , \textcolor{keywordtype}{int} size);
+00169 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_ab62a2cbf81f6577db0668f46aed364ef}{calculate\_blocks}(\textcolor{keywordtype}{int} minimum , \textcolor{keywordtype}{int} maximum);
+00170 \textcolor{keywordtype}{int} \hyperlink{memory_management_8h_a156fe06c8c22c3783995e8c2ea0621b9}{calculate\_free\_blocks}(\textcolor{keywordtype}{int} minimum , \textcolor{keywordtype}{int} maximum);
+00171 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a8a12d29f1824bf7225965e8b35a0f3a8}{memory\_free}(\textcolor{keywordtype}{void} *pointer);
+00172 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a163c8fc7314dff46f38171fe7e652ade}{delete\_pointer}(\textcolor{keywordtype}{int} minimum , \textcolor{keywordtype}{int} start , \textcolor{keywordtype}{int} size , \textcolor{keywordtype}{void} *ptr);
+00173 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a9961d9a3b8f1cab8d2801a51cac018c1}{block\_information}(\textcolor{keywordtype}{void});
+00174 \hyperlink{memory_management_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \hyperlink{memory_management_8h_a088ff8aff3fbfc997ad69afced4574c8}{free\_block\_information}(\textcolor{keywordtype}{void});
+00175 \textcolor{comment}{/*******************************************************************************}
+00176 \textcolor{comment}{ REVISION HISTORY:}
+00177 \textcolor{comment}{ }
+00178 \textcolor{comment}{  Rev 1.1   SEP 24 2015 09:55:00   Rohit Kumar}
+00179 \textcolor{comment}{  }
+00180 \textcolor{comment}{ ******************************************************************************/}
+00181 \textcolor{preprocessor}{#endif // MEMORY\_H\_}
+\end{DoxyCode}

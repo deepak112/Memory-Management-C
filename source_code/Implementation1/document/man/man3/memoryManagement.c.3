@@ -1,0 +1,103 @@
+.TH "src/memoryManagement.c" 3 "Thu Oct 1 2015" "Version version1" "MEMORY MANAGEMENT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/memoryManagement.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include 'memoryManagement\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBmemory_alloc\fP (int size)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBadd_node_to_list\fP (struct \fB_info_area\fP *newNode)"
+.br
+.ti -1c
+.RI "struct \fB_info_area\fP * \fBcreate_node\fP (int size)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBmemory_information\fP ()"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBmemory_free\fP (void *pointer)"
+.br
+.ti -1c
+.RI "void * \fBcheck_for_chunk_space\fP (int size)"
+.br
+.ti -1c
+.RI "void * \fBmemory_calloc\fP (int nelem, int elsize)"
+.br
+.ti -1c
+.RI "void * \fBmemory_realloc\fP (void *ptr, int size)"
+.br
+.ti -1c
+.RI "int \fBmemory_size\fP (void *pointer)"
+.br
+.ti -1c
+.RI "\fBstatus\fP \fBdisplay_list\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBin\fP = \fBINITIAL_ZERO\fP"
+.br
+.ti -1c
+.RI "\fBareaIndex\fP = \fBINITIAL_ZERO\fP"
+.br
+.ti -1c
+.RI "\fBsizeOfNode\fP = sizeof( struct \fB_info_area\fP )"
+.br
+.ti -1c
+.RI "struct \fB_info_area\fP * \fBhead\fP = NULL"
+.br
+.ti -1c
+.RI "struct \fB_info_area\fP * \fBcurrent\fP = NULL"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBstatus\fP add_node_to_list (struct \fB_info_area\fP * newNode)"
+
+.SS "void* check_for_chunk_space (int size)"
+
+.SS "struct \fB_info_area\fP* create_node (int size)"
+
+.SS "\fBstatus\fP display_list ()"
+
+.SS "void* memory_alloc (int size)"
+
+.SS "void* memory_calloc (int nelem, int elsize)"
+
+.SS "\fBstatus\fP memory_free (void * pointer)"
+
+.SS "\fBstatus\fP memory_information ()"
+
+.SS "void* memory_realloc (void * ptr, int size)"
+
+.SS "int memory_size (void * pointer)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "areaIndex = \fBINITIAL_ZERO\fP"
+
+.SS "struct \fB_info_area\fP * current = NULL"
+
+.SS "struct \fB_info_area\fP* head = NULL"
+
+.SS "in = \fBINITIAL_ZERO\fP"
+
+.SS "sizeOfNode = sizeof( struct \fB_info_area\fP )"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MEMORY MANAGEMENT from the source code\&.

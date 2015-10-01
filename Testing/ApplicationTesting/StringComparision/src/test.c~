@@ -1,0 +1,546 @@
+/*******************************************************************************
+ *                           memoryManagement.c
+ *
+ * Copyright(C) 2015.MindTree Pvt. Ltd. All rights reserved.
+ *
+ * Revision : V1.0
+ *
+ * Last Modified Date    Author         Description
+ *
+ * 01-Sep-2015                         Initial version
+ *
+ ******************************************************************************/
+
+/*******************************************************************************
+ * @file   memoryManagement.c
+ * @brief  This program has the library functions for allocating memory,
+           deallocating memory and displaying the size of free memory and 
+	   allocated memory.
+
+	  *memory_alloc function - This function provides memory dynamically to 
+	                           user.  
+
+          *memory_free function - This function frees the space allocated for the
+		                  user in the created heap space under user's 
+                                  request.
+
+          *memory_calloc function - This function provides memory dynamically to 
+                                    user in asked number of blocks of specified 
+                                    size and intialise them to zero.
+
+          *memory_realloc function - This function reallocates memory to the 
+	                             previously allocated memory pointer by asking  
+                                     the user ,the already allocated pointer and  
+                                     size to be allocated.
+
+  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Include files
+ ******************************************************************************/
+
+#include <stddef.h>
+#include "memoryManagement.h"
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - 
+ * 
+ * .
+ * Param[in]  - value - 
+ * Param[in]  - size  -  
+ * Return     - ptr   - 
+ ******************************************************************************/
+
+int perform_alloc ( int minimum , int maximum , int start ,int size)
+{
+    int index1,index2,blockNumber,end,flag=0,slotNumber;
+    char *ptr;
+    end = maximum - minimum ;
+    ptr = &totalMemoryArea[ start ];
+    for( index2 = 0 ; index2 <= end ; index2++ )
+    {
+	flag = 0;
+	for( index1 = 0 ; index1 < 8 ; index1++ )
+	{
+	    slotNumber = minimum + index2;
+ 	    if((totalMemoryArea[slotNumber] & 1<<index1) == 0)
+	    {
+		blockNumber = (8*index2) + index1 + 1 ;
+		totalMemoryArea[slotNumber] = totalMemoryArea[slotNumber] | 1<<index1 ;
+		flag = 1 ;
+		break;
+	    }
+        }
+    	if(1 == flag)
+    	break;
+    }     
+    if((minimum+(blockNumber/8)) <= maximum)
+    {      
+        return ptr + (blockNumber*size);
+    }
+    else
+    {
+	return NULL;
+    }
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - 
+ 
+ * Param[in]  - 
+ * Return     - 
+ ******************************************************************************/
+
+void *check_for_space(int size)
+{
+    void *ptr;
+    status s = FALSE;
+    if(size <= SIZE8 && s == FALSE)
+    { 
+	ptr=perform_alloc( START_LENGTH_SIZE8 , END_LENGTH_SIZE8 , INITIAL_LENGTH_SIZE8 , SIZE8 );
+	s=TRUE;
+        if(ptr == NULL)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE16 && s == FALSE)
+    {
+        ptr=perform_alloc( START_LENGTH_SIZE16 , END_LENGTH_SIZE16 , INITIAL_LENGTH_SIZE16 , SIZE16 );
+	s=TRUE;
+	if(ptr == NULL)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE32 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE32 , END_LENGTH_SIZE32 , INITIAL_LENGTH_SIZE32 , SIZE32 );
+	s=TRUE;
+	if(ptr == NULL)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE64 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE64 , END_LENGTH_SIZE64 , INITIAL_LENGTH_SIZE64 , SIZE64 );
+	s=TRUE;
+	if(ptr == NULL)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE128 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE128 , END_LENGTH_SIZE128 , INITIAL_LENGTH_SIZE128 , SIZE128 );
+	s=TRUE;
+	if(NULL == ptr)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE256 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE256 , END_LENGTH_SIZE256 , INITIAL_LENGTH_SIZE256 , SIZE256 );
+	s=TRUE;
+	if(NULL == ptr)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE512 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE512 , END_LENGTH_SIZE512 , INITIAL_LENGTH_SIZE512 , SIZE512 );
+	s=TRUE;
+	if(NULL == ptr)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE1024 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE1024 , END_LENGTH_SIZE1024 , INITIAL_LENGTH_SIZE1024 , SIZE1024 );
+	s = TRUE;
+	if(NULL == ptr)
+	{
+	    s=FALSE;
+	}
+    }
+    if(size <= SIZE2048 && s == FALSE)
+    {
+	ptr=perform_alloc( START_LENGTH_SIZE2048 , END_LENGTH_SIZE2048 , INITIAL_LENGTH_SIZE2048 , SIZE2048 );
+	s = TRUE;
+	if(NULL == ptr)
+	{
+	    s=FALSE;
+	}
+    }
+    /*If user requires size greater than 500 then seperate space is also available*/
+    if(s == FALSE)
+    {
+	 ptr=NULL;
+	
+    }
+    return ptr;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - This function provides memory dynamically to user. 
+ *
+ * Param[in]  - size - It takes size as arguement from user.
+ * 
+ * Return     - It returns NULL if it can't give user required memory or it 
+ *              returns base address of the memory which it allocates to user 
+                dynamically.
+ ******************************************************************************/
+
+void *memory_alloc(int size)
+{
+    void *ptr;
+    if(size <= 0) /*if users ask for size 0 or less it prints error and returns*/
+    {
+	printf("Invalid Size\n");
+	return 0;
+    }
+    ptr = check_for_space(size);
+    return ptr;	
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - This function frees the space allocated for the user in the created 
+ *         heap space under user's request.
+ * Param[in]  - void pointer ,the pointer holding the address to be freed .
+ * Return     - Always returns TRUE as status.
+ ******************************************************************************/
+
+status memory_free(void *pointer)
+{
+    status s = FALSE;
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE8] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE8] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE8 , INITIAL_LENGTH_SIZE8 , SIZE8 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE16] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE16] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE16 , INITIAL_LENGTH_SIZE16 , SIZE16 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE32] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE32] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE32 , INITIAL_LENGTH_SIZE32 , SIZE32 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE64] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE64] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE64 , INITIAL_LENGTH_SIZE64 , SIZE64 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE128] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE128] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE128 , INITIAL_LENGTH_SIZE128 , SIZE128 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE256] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE256] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE256 , INITIAL_LENGTH_SIZE256 , SIZE256 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE512] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE512] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE512 , INITIAL_LENGTH_SIZE512 , SIZE512 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE1024] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE1024] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE1024 , INITIAL_LENGTH_SIZE1024 , SIZE1024 , pointer );     
+    }
+    else if( (&totalMemoryArea[INITIAL_LENGTH_SIZE2048] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE2048] >= pointer) )
+    {
+	s = delete_pointer( START_LENGTH_SIZE2048 , INITIAL_LENGTH_SIZE2048 , SIZE2048 , pointer );     
+    }
+    else
+    {
+        s = FALSE;
+    }
+    return s;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - 
+ * Param[in]  - size - It takes size as arguement from user 
+ * Return     - 
+ ******************************************************************************/
+
+status delete_pointer(int minimum , int start , int size , void *ptr)
+{
+    unsigned char *pointer ;
+    int bits = 255 ;
+    pointer = (char *)ptr;
+    int result = 0 , block = 0 , slot = 0;
+    result = pointer - &totalMemoryArea[start];
+    result = result / size;
+    printf("result :%d\n",minimum + block);
+    block = result / 8;
+    slot = result % 8;
+    printf("%d\n", block); 
+    printf("%d\n", slot-1);
+    bits ^= (-0 ^ bits) & (1 << slot-1);
+    printf("%d\n", bits);
+    totalMemoryArea[minimum+block] = totalMemoryArea[minimum+block] & bits; 
+    return TRUE;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - This function provides memory dynamically to user in asked number of
+ *         blocks of specified size and intialise them to zero.
+ *
+ * Param[in]  - nelem = number of blocks,elsize = size requested by the user.
+ *
+ * Return     - It returns NULL if it can't give user required memory or it 
+ *              returns base address of the memory which it allocates to user 
+                dynamically.
+ ******************************************************************************/
+
+void *memory_calloc(int nelem, int elsize) 
+{
+    int size = nelem * elsize; 
+    if(nelem <= 0 || elsize <= 0)
+    {
+	return 0;
+    }
+    void *ptr = memory_alloc(size);
+    memset(ptr, 0, size);
+    return ptr;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - This function reallocates memory to the previously allocated memory 
+ *         pointer by asking the user ,the already allocated pointer and size
+ *         to be allocated.  
+ * Param[in]  - pointer to be realocated and size to be allocated.
+ * Return     - It returns NULL if it can't give user required memory or it 
+ *              returns base address of the memory which it allocates to user 
+ *              dynamically.
+ ******************************************************************************/
+
+void * memory_realloc(void * ptr, int size)
+{
+    void *new;
+    if (!ptr) 
+    {
+        new = memory_alloc(size);
+    } 
+    else 
+    {
+        if (memory_size(ptr) < size) 
+	{
+            new = memory_alloc(size);
+            memcpy(new, ptr, memory_size(ptr));
+	    memory_free(ptr);
+        } 
+	else 
+	{
+            new = ptr;
+        }
+    }
+    return new;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - 
+ 
+ * Param[in]  - Name and description.
+ * Param[out] - Name and description.
+ * Return     - Name and description.
+ ******************************************************************************/
+
+int memory_size(void *ptr)
+{
+    char *pointer = NULL;
+    pointer = (char *)ptr;
+    int s = 0;
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE8] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE8] >= pointer) )
+    {
+	s = SIZE8;    
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE16] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE16] >= pointer) )
+    {
+	s = SIZE16; 
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE32] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE32] >= pointer) )
+    {
+	s = SIZE32;   
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE64] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE64] >= pointer) )
+    {
+	s = SIZE64; 
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE128] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE128] >= pointer) )
+    {
+	s = SIZE128;     
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE256] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE256] >= pointer) )
+    {
+	s = SIZE256;  
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE512] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE512] >= pointer) )
+    {
+	s = SIZE512; 
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE1024] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE1024] >= pointer) )
+    {
+	s = SIZE1024; 
+    }
+    if( (&totalMemoryArea[INITIAL_LENGTH_SIZE2048] <= pointer) && (&totalMemoryArea[MAX_LENGTH_SIZE2048] >= pointer) )
+    {
+	s = SIZE2048;  
+    }
+    else
+    {
+        s = 0;
+    }
+    return s;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - block_information-This function used to display the satus of all
+ *                           type of blocks,How many blocks of which size 
+ *                            is used.
+ *
+ * Return- The status of function true or false.
+ ******************************************************************************/
+
+#if 1
+status block_information(void)
+{
+    int  blockType = 8 , usedBlocks = 0 , kount ;
+    for(kount = 1; kount <= 9 ; kount++)
+    {
+	usedBlocks = used_blocks ( blockType ) ;
+	printf("\nUsed blocks of size %d : %d", blockType , usedBlocks);
+        blockType =  blockType * 2;
+    }
+}
+#endif
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - used_block- This function is used to find out the number of used blocks
+ *                     giving the size of block. 
+ * Param[in]  - size
+ * Return     - the total number of used blocks.
+ ******************************************************************************/
+
+int used_blocks(int size)
+{
+    int blocks;
+    if(size == 8)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE8 , END_LENGTH_SIZE8);
+    }
+    if(size == 16)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE16 , END_LENGTH_SIZE16);
+    }
+    if(size == 32)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE32 , END_LENGTH_SIZE32);
+    }
+    if(size == 64)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE64 , END_LENGTH_SIZE64);
+    }
+    if(size == 128)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE128 , END_LENGTH_SIZE128);
+    }
+    if(size == 256)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE256 , END_LENGTH_SIZE256);
+    }
+    if(size == 512)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE512 , END_LENGTH_SIZE512);
+    }
+    if(size == 1024)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE1024 , END_LENGTH_SIZE1024);
+    }
+    if(size == 2048)
+    {
+	blocks = calculate_blocks(START_LENGTH_SIZE2048 , END_LENGTH_SIZE2048);
+    }
+   return blocks;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - calulate_block-This function counts the number of used blocks of given 
+ *         size.
+ * Param[in]  - maximum and minimum block number of respective size.
+ * Return     - The total count of used blocks.
+ ******************************************************************************/
+
+int calculate_blocks(int minimum , int maximum)
+{
+    int index1, index2, result = 0, end, slotNumber;
+    char *ptr;
+    end = maximum - minimum ;
+    for( index2 = 0 ; index2 < end ; index2++ )
+    {
+	for( index1 = 0 ; index1 < 8 ; index1++ )
+	{
+	    slotNumber = minimum + index2;
+ 	    if((totalMemoryArea[slotNumber] & 1<<index1) != 0)
+	    {
+		result++;
+	    }
+        }
+    }
+    return result;
+}
+
+/*******************************************************************************
+ REVISION HISTORY:
+ 
+  Rev 1.1   SEP 24 2015 14:16:18   Rohit Kumar
+  
+ ******************************************************************************/

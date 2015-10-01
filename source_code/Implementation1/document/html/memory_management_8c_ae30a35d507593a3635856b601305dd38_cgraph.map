@@ -1,0 +1,5 @@
+<map id="memory_alloc" name="memory_alloc">
+<area shape="rect" id="node2" href="$memory_management_8c.html#a0ee12c76feab0bfc62d67af9989f828d" title="check_for_chunk_space" alt="" coords="156,5,319,32"/>
+<area shape="rect" id="node3" href="$memory_management_8c.html#ae134f9f03edd9c11c52eb9e3887911da" title="add_node_to_list" alt="" coords="177,56,297,83"/>
+<area shape="rect" id="node4" href="$memory_management_8c.html#ac30901f2f52d2898523245fe4ad744a0" title="create_node" alt="" coords="191,107,284,133"/>
+</map>

@@ -1,0 +1,83 @@
+/*******************************************************************************
+ *                              testfile.c
+ *
+ * Copyright(C) 2006.MindTree Pvt. Ltd. All rights reserved.
+ *
+ * Revision : V1.0
+ *
+ * Last Modified Date    Author         Description
+ *
+ * 23-Sep-2015           Name       Initial version
+ *
+ ******************************************************************************/
+/*******************************************************************************
+ * @file    testfile.c
+ * @brief 
+ 
+ ******************************************************************************/
+ 
+/*******************************************************************************
+ * Include files
+ ******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include "memoryManagement.h"
+
+/*******************************************************************************
+ * MACRO DEFINITION
+ ******************************************************************************/
+#define  SUCCESS                    0
+#define  MINIMUM_MALLOC_TEST_CASES  1
+#define  MAXIMUM_MALLOC_TEST_CASES  40
+#define  MINIMUM_FREE_TEST_CASES    1
+#define  MAXIMUM_FREE_TEST_CASES    10
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+int generate_test_case();
+
+
+int main()
+{
+    generate_test_case();
+    return SUCCESS;
+}
+
+/*******************************************************************************
+ * API DEFINITION
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Brief - this function generates various testcases for memory allocation and 
+           for deallocation 
+ * Return - success - returns status as success.
+ ******************************************************************************/
+
+int generate_test_case()
+{
+   int index, requested_bytes, num;
+    char **dptr;
+    dptr = memory_alloc(sizeof(char *));
+    /* performing test case for malloc function*/
+    printf("\nthe malloc proces\n");
+    for (index = MINIMUM_MALLOC_TEST_CASES; index <= MAXIMUM_MALLOC_TEST_CASES ; index++)
+    {
+        printf("pointer number=======%d",index);
+        requested_bytes = rand() % 10000 + 1;
+        printf("\nthe size allocated is %d\n",requested_bytes);
+        *(dptr+index)=memory_alloc(requested_bytes);
+        memory_information();
+    }
+printf("\nthe free proces\n");
+/* performing test case for free function*/
+for (index = MINIMUM_FREE_TEST_CASES ; index <= MAXIMUM_FREE_TEST_CASES ; index++)
+    {
+        requested_bytes = rand() % 10 + 1;
+        printf("\nthe free is %d\n",requested_bytes);
+        memory_free(*(dptr+requested_bytes));
+        memory_information();
+       
+    }
+     return SUCCESS;
+}

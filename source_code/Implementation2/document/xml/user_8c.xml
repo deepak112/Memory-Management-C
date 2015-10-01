@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="user_8c" kind="file" language="C++">
+    <compoundname>user.c</compoundname>
+    <includes refid="memory_management_8h" local="yes">memoryManagement.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">time.h</includes>
+    <incdepgraph>
+      <node id="40">
+        <label>memoryManagement.h</label>
+        <link refid="memory_management_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>stdlib.h</label>
+      </node>
+      <node id="43">
+        <label>string.h</label>
+      </node>
+      <node id="44">
+        <label>time.h</label>
+      </node>
+      <node id="39">
+        <label>src/user.c</label>
+        <link refid="user.c"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="user_8c_1a1719f306508f813a37cd7d28e2c53435" prot="public" static="no">
+        <name>ERR_NO_NUM</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="37" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="37" bodyend="-1"/>
+        <referencedby refid="user_8c_1adc26eb8c308ee1308c09c2aab7b8a98e" compoundref="user_8c" startline="53" endline="88">myRandom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="user_8c_1a6332413b933f27d85c87c288f5b0d260" prot="public" static="no">
+        <name>ERR_NO_MEM</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="38" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="38" bodyend="-1"/>
+        <referencedby refid="user_8c_1adc26eb8c308ee1308c09c2aab7b8a98e" compoundref="user_8c" startline="53" endline="88">myRandom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="user_8c_1a0592dba56693fad79136250c11e5a7fe" prot="public" static="no">
+        <name>MAX_SIZE</name>
+        <initializer>8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="39" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="39" bodyend="-1"/>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="user_8c_1a7556679f2a7178d92c14f8f311c592b9" prot="public" static="no">
+        <name>MALLOC_MAX_SIZE</name>
+        <initializer>2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="40" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="40" bodyend="-1"/>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="user_8c_1a3f900af529705a735196fabffa13dd66" prot="public" static="no">
+        <name>CALLOC_MAX_SIZE</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="41" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="41" bodyend="-1"/>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="user_8c_1abcb0b28b93251f50ed0d9a89040cda61" prot="public" static="no">
+        <name>CALLOC_MAX_ELEMENTS</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="42" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="42" bodyend="-1"/>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="user_8c_1a12b95e73e5048ea0419f593afae7240c" prot="public" static="no">
+        <name>REALLOC_MAX_SIZE</name>
+        <initializer>2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="43" column="9" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="43" bodyend="-1"/>
+        <referencedby refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="user_8c" startline="97" endline="213">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="user_8c_1adc26eb8c308ee1308c09c2aab7b8a98e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int myRandom</definition>
+        <argsstring>(int size)</argsstring>
+        <name>myRandom</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="53" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="53" bodyend="88"/>
+        <references refid="user_8c_1a6332413b933f27d85c87c288f5b0d260" compoundref="user_8c" startline="38">ERR_NO_MEM</references>
+        <references refid="user_8c_1a1719f306508f813a37cd7d28e2c53435" compoundref="user_8c" startline="37">ERR_NO_NUM</references>
+      </memberdef>
+      <memberdef kind="function" id="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" line="97" column="1" bodyfile="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c" bodystart="97" bodyend="213"/>
+        <references refid="user_8c_1a0592dba56693fad79136250c11e5a7fe" compoundref="user_8c" startline="39">MAX_SIZE</references>
+        <references refid="user_8c_1a7556679f2a7178d92c14f8f311c592b9" compoundref="user_8c" startline="40">MALLOC_MAX_SIZE</references>
+        <references refid="memory_management_8c_1ae30a35d507593a3635856b601305dd38" compoundref="memory_management_8c" startline="219" endline="229">memory_alloc</references>
+        <references refid="user_8c_1a3f900af529705a735196fabffa13dd66" compoundref="user_8c" startline="41">CALLOC_MAX_SIZE</references>
+        <references refid="user_8c_1abcb0b28b93251f50ed0d9a89040cda61" compoundref="user_8c" startline="42">CALLOC_MAX_ELEMENTS</references>
+        <references refid="memory_management_8c_1a9fddae3713297adcee22fae422fe4383" compoundref="memory_management_8c" startline="332" endline="342">memory_calloc</references>
+        <references refid="memory_management_8c_1a8a12d29f1824bf7225965e8b35a0f3a8" compoundref="memory_management_8c" startline="242" endline="286">memory_free</references>
+        <references refid="user_8c_1a12b95e73e5048ea0419f593afae7240c" compoundref="user_8c" startline="43">REALLOC_MAX_SIZE</references>
+        <references refid="memory_management_8c_1aeae46c0f1bc40e0e3b469f40feefd8d0" compoundref="memory_management_8c" startline="358" endline="379">memory_realloc</references>
+        <references refid="memory_management_8c_1a9961d9a3b8f1cab8d2801a51cac018c1" compoundref="memory_management_8c" startline="453" endline="468">block_information</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>user.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright(C)<sp/>2006.MindTree<sp/>Pvt.<sp/>Ltd.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Revision<sp/>:<sp/>V1.0</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Last<sp/>Modified<sp/>Date<sp/><sp/><sp/><sp/>Authors<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>28-SEP-2015<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Prathyusha<sp/>A.N.V.S<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Initial<sp/>version</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Deepak<sp/>Birla</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rohit<sp/>Kumar</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dhyaneswaran<sp/>DG</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>@file<sp/>user.c</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>a<sp/>testing<sp/>module<sp/>for<sp/>the<sp/>library<sp/>&quot;memoryManagement.h&quot;.This<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>program<sp/>tests<sp/>automatically<sp/>the<sp/>library<sp/>by<sp/>self<sp/>generating<sp/>random<sp/>numbers<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>and<sp/>for<sp/>respective<sp/>numbers<sp/>,respective<sp/>sizes<sp/>are<sp/>allocated<sp/>in<sp/>the<sp/>datasegment</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>User<sp/>is<sp/>asked<sp/>for<sp/>number<sp/>of<sp/>memmory_alloc<sp/>function<sp/>he<sp/>wants<sp/>to<sp/>perform<sp/>and<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>number<sp/>of<sp/>memory_free<sp/>function<sp/>he<sp/>wants<sp/>to<sp/>perform<sp/>and<sp/>according<sp/>to<sp/>that<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>various<sp/>test<sp/>cases<sp/>are<sp/>randomly<sp/>generated<sp/>and<sp/>functions<sp/>are<sp/>done<sp/>and<sp/>during</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>display<sp/>every<sp/>information<sp/>is<sp/>shown.<sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Include<sp/>files</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include&quot;<ref refid="memory_management_8h" kindref="compound">memoryManagement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>MACRO<sp/>DEFINITION</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="user_8c_1a1719f306508f813a37cd7d28e2c53435" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERR_NO_NUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="user_8c_1a6332413b933f27d85c87c288f5b0d260" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERR_NO_MEM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="user_8c_1a0592dba56693fad79136250c11e5a7fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="user_8c_1a7556679f2a7178d92c14f8f311c592b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MALLOC_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="user_8c_1a3f900af529705a735196fabffa13dd66" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALLOC_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="user_8c_1abcb0b28b93251f50ed0d9a89040cda61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALLOC_MAX_ELEMENTS<sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="user_8c_1a12b95e73e5048ea0419f593afae7240c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REALLOC_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>API<sp/>DECLARATION</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>Brief<sp/>-<sp/>This<sp/>function<sp/>generates<sp/>random<sp/>numbers<sp/>for<sp/>performing<sp/>testing<sp/>of<sp/>the<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>header<sp/>file<sp/>&quot;memoryManagement.h&quot;.<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>Param[in]<sp/><sp/>-<sp/>size<sp/>-<sp/>It<sp/>takes<sp/>size<sp/>as<sp/>arguement<sp/>from<sp/>user<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>Return<sp/><sp/><sp/><sp/><sp/>-<sp/>It<sp/>returns<sp/>an<sp/>integer<sp/>which<sp/>is<sp/>a<sp/>random<sp/>number<sp/>of<sp/>any<sp/>range.</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="user_8c_1adc26eb8c308ee1308c09c2aab7b8a98e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="user_8c_1adc26eb8c308ee1308c09c2aab7b8a98e" kindref="member">myRandom</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>number;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numNums<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*numArr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&gt;=<sp/>0)<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(numArr<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(numArr);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((numArr<sp/>=<sp/>malloc<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>*<sp/>size))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="user_8c_1a6332413b933f27d85c87c288f5b0d260" kindref="member">ERR_NO_MEM</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(index<sp/>=<sp/>0;<sp/>index<sp/><sp/>&lt;<sp/>size;<sp/>index++)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numArr[index]<sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numNums<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>0<sp/>==<sp/>numNums<sp/>)<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="user_8c_1a1719f306508f813a37cd7d28e2c53435" kindref="member">ERR_NO_NUM</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>number<sp/>=<sp/>rand()<sp/>%<sp/>numNums;<sp/></highlight><highlight class="comment">/*<sp/>to<sp/>genearate<sp/>random<sp/>numbers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>numArr[number];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>numArr[number]<sp/>=<sp/>numArr[numNums-1];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>numNums--;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>0<sp/>==<sp/>numNums)<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(numArr);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numArr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*<sp/>API<sp/>DECLARATION</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*<sp/>Brief<sp/>-<sp/>This<sp/>is<sp/>the<sp/>main<sp/>function<sp/>in<sp/>which<sp/>various<sp/>functions<sp/>are<sp/>tested<sp/>using<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>switch<sp/>cases<sp/>,user<sp/>is<sp/>given<sp/>with<sp/>menu<sp/>where<sp/>every<sp/>function<sp/>is<sp/>tested<sp/>and<sp/>by<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*<sp/>calling<sp/>memory_information<sp/>each<sp/>details<sp/>are<sp/>shown<sp/>to<sp/>the<sp/>user.<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="user_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuChoice<sp/>=<sp/>0<sp/>,<sp/>subMenuChoice<sp/>=<sp/>0,<sp/>size<sp/>=<sp/>0<sp/>,<sp/>totalElements<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>choice<sp/>=</highlight><highlight class="charliteral">&apos;y&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**pointer;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>,<sp/>number<sp/>=<sp/>0,<sp/>*arrayPointer[<ref refid="user_8c_1a0592dba56693fad79136250c11e5a7fe" kindref="member">MAX_SIZE</ref>],<sp/>numFree<sp/>=<sp/>0,<sp/>numRealloc,<sp/>random,<sp/>*previousAddress,<sp/>num;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>pointer<sp/>=<sp/>arrayPointer;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>__fpurge(stdin);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n\n\t\tMENU\n\t1.<sp/>Use<sp/>memory_alloc<sp/>or<sp/>Use<sp/>memory_calloc\n\t2.<sp/>Use<sp/>memory_free\n\t3.<sp/>Use<sp/>memory_realloc&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n\t4.<sp/>memory_information\n\t5.<sp/>free<sp/>everything&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n\nEnter<sp/>your<sp/>menuChoice<sp/>:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal"><sp/>,<sp/>&amp;menuChoice);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(menuChoice)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n\n\t\tSUB-MENU\n\t1.<sp/>Use<sp/>memory_alloc<sp/>\n\t2.<sp/>Use<sp/>memory_calloc\n\nEnter<sp/>your<sp/>menuChoice<sp/>:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal"><sp/>,<sp/>&amp;subMenuChoice);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(subMenuChoice)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;How<sp/>many<sp/>memory_alloc<sp/>calls<sp/>u<sp/>want<sp/>:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,&amp;num);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Size\tAddress\n-----------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(index<sp/>=<sp/>number<sp/>;<sp/>index<sp/>&lt;<sp/>number<sp/>+<sp/>num<sp/>;<sp/>index++)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>rand()<sp/>%<sp/><ref refid="user_8c_1a7556679f2a7178d92c14f8f311c592b9" kindref="member">MALLOC_MAX_SIZE</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(pointer<sp/>+<sp/>index)<sp/>=<sp/><ref refid="memory_management_8c_1ae30a35d507593a3635856b601305dd38" kindref="member">memory_alloc</ref>(size);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\t%p\n&quot;</highlight><highlight class="normal">,size,*(pointer<sp/>+index));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nTotal<sp/>memory_alloc<sp/>calls<sp/>:%d\n&quot;</highlight><highlight class="normal">,num);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number<sp/>=<sp/>number<sp/>+<sp/>num;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;How<sp/>many<sp/>memory_calloc<sp/>calls<sp/>u<sp/>want<sp/>:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,&amp;num);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Size\tElements\tAdress\n-----------------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(index<sp/>=<sp/>number<sp/>;<sp/>index<sp/>&lt;<sp/>number+num<sp/>;index++)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>rand()<sp/>%<sp/><ref refid="user_8c_1a3f900af529705a735196fabffa13dd66" kindref="member">CALLOC_MAX_SIZE</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalElements<sp/>=<sp/>rand()<sp/>%<sp/><ref refid="user_8c_1abcb0b28b93251f50ed0d9a89040cda61" kindref="member">CALLOC_MAX_ELEMENTS</ref><sp/>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(pointer<sp/>+<sp/>index)<sp/>=<sp/><ref refid="memory_management_8c_1a9fddae3713297adcee22fae422fe4383" kindref="member">memory_calloc</ref>(totalElements<sp/>,<sp/>size);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\t%d\t\t%p\n&quot;</highlight><highlight class="normal">,size,totalElements,*(pointer<sp/>+<sp/>index));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nTotal<sp/>memory_calloc<sp/>calls<sp/>:%d\n&quot;</highlight><highlight class="normal">,num);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number<sp/>=<sp/>number<sp/>+<sp/>num;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nWrong<sp/>Choice<sp/>!!!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Out<sp/>of<sp/>%d<sp/>allocated<sp/>memories<sp/>how<sp/>many<sp/>you<sp/>want<sp/>to<sp/>free<sp/>:&quot;</highlight><highlight class="normal">,number);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,&amp;numFree);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(numFree<sp/>&gt;<sp/>number<sp/>||<sp/>numFree<sp/>&lt;=<sp/>0);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Number\tAddress\n-----------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(index<sp/>=<sp/>number-1<sp/>;<sp/>index<sp/>&gt;=<sp/>(number<sp/>-<sp/>numFree)<sp/>;index--)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\t%p\n&quot;</highlight><highlight class="normal">,index,*(pointer<sp/>+index));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(NULL<sp/>!=<sp/>*(pointer<sp/>+index))</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="memory_management_8c_1a8a12d29f1824bf7225965e8b35a0f3a8" kindref="member">memory_free</ref>(*(pointer<sp/>+index));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nTotal<sp/>memory_free<sp/>calls<sp/>:%d\n&quot;</highlight><highlight class="normal">,numFree);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number=number-numFree;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Out<sp/>of<sp/>%d<sp/>allocated<sp/>memories<sp/>how<sp/>many<sp/>you<sp/>want<sp/>to<sp/>reallocate<sp/>:&quot;</highlight><highlight class="normal">,number);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,&amp;numRealloc);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(numRealloc<sp/>&gt;<sp/>number<sp/>||<sp/>numRealloc<sp/>&lt;=<sp/>0);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Previous_Address\tNew_SIZE\tNew_Adress\n----------------------------------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(index<sp/>=<sp/>number-1<sp/>;<sp/>index<sp/>&gt;=<sp/>(number<sp/>-<sp/>numRealloc)<sp/>;index--)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size=rand()<sp/>%<sp/><ref refid="user_8c_1a12b95e73e5048ea0419f593afae7240c" kindref="member">REALLOC_MAX_SIZE</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>previousAddress<sp/>=<sp/>*(pointer<sp/>+<sp/>index);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(pointer<sp/>+<sp/>index)=<ref refid="memory_management_8c_1aeae46c0f1bc40e0e3b469f40feefd8d0" kindref="member">memory_realloc</ref>(*(pointer<sp/>+<sp/>index),size);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%p\t\t%d\t\t%p\n&quot;</highlight><highlight class="normal">,previousAddress,size,*(pointer<sp/>+<sp/>index));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nTotal<sp/>memory_realloc<sp/>calls<sp/>:%d\n&quot;</highlight><highlight class="normal">,numRealloc);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="memory_management_8c_1a9961d9a3b8f1cab8d2801a51cac018c1" kindref="member">block_information</ref>();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(index<sp/>=<sp/>0<sp/>;<sp/>index<sp/>&lt;<sp/>number<sp/>;<sp/>index++)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(NULL<sp/>!=<sp/>*(pointer<sp/>+index))</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="memory_management_8c_1a8a12d29f1824bf7225965e8b35a0f3a8" kindref="member">memory_free</ref>(*(pointer<sp/>+<sp/>index));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nWrong<sp/>Choice<sp/>!!!!!!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nPress<sp/>y<sp/>to<sp/>continue<sp/>:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;<sp/>%c&quot;</highlight><highlight class="normal">,&amp;choice);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(choice<sp/>==<sp/></highlight><highlight class="charliteral">&apos;y&apos;</highlight><highlight class="normal"><sp/>||<sp/>choice<sp/>==<sp/></highlight><highlight class="charliteral">&apos;Y&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/>REVISION<sp/>HISTORY:</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/>Rev<sp/>1.1<sp/><sp/><sp/>SEP<sp/>28<sp/>2015<sp/>2:17:59<sp/><sp/>A.N.V.S<sp/>PRATHYUSHA</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/cisadmin/Desktop/M1032348/mini_project/source_code/Implementation2/src/user.c"/>
+  </compounddef>
+</doxygen>
